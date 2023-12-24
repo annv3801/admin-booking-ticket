@@ -1,0 +1,6 @@
+.current-page {
+    background-color: #007bff; /* Set the background color for the current page */
+    color: #fff; /* Set the text color for the current page */
+    font-weight: bold; /* Make the text bold for the current page */
+    /* Add any other styles as needed */
+}
