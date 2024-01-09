@@ -70,12 +70,12 @@ const Header = () => {
                                         {/*end::Avatar*/}
                                         {/*begin::Username*/}
                                         <div className="d-flex flex-column">
-                                            <div className="fw-bold d-flex align-items-center fs-5">Robert Fox
+                                            <div className="fw-bold d-flex align-items-center fs-5">An
                                                 <span
                                                     className="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
                                             </div>
                                             <a href="#"
-                                               className="fw-semibold text-muted text-hover-primary fs-7">robert@kt.com</a>
+                                               className="fw-semibold text-muted text-hover-primary fs-7">nva030801@gmail.com</a>
                                         </div>
                                         {/*end::Username*/}
                                     </div>
@@ -88,84 +88,6 @@ const Header = () => {
                                 <div className="menu-item px-5">
                                     <a href="../../demo1/dist/account/overview.html" className="menu-link px-5">My
                                         Profile</a>
-                                </div>
-                                {/*end::Menu item*/}
-                                {/*begin::Menu item*/}
-                                <div className="menu-item px-5">
-                                    <a href="../../demo1/dist/apps/projects/list.html" className="menu-link px-5">
-                                        <span className="menu-text">My Projects</span>
-                                        <span className="menu-badge">
-													<span
-                                                        className="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
-												</span>
-                                    </a>
-                                </div>
-                                {/*end::Menu item*/}
-                                {/*begin::Menu item*/}
-                                <div className="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                     data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-                                    <a href="#" className="menu-link px-5">
-                                        <span className="menu-title">My Subscription</span>
-                                        <span className="menu-arrow"></span>
-                                    </a>
-                                    {/*begin::Menu sub*/}
-                                    <div className="menu-sub menu-sub-dropdown w-175px py-4">
-                                        {/*begin::Menu item*/}
-                                        <div className="menu-item px-3">
-                                            <a href="../../demo1/dist/account/referrals.html"
-                                               className="menu-link px-5">Referrals</a>
-                                        </div>
-                                        {/*end::Menu item*/}
-                                        {/*begin::Menu item*/}
-                                        <div className="menu-item px-3">
-                                            <a href="../../demo1/dist/account/billing.html"
-                                               className="menu-link px-5">Billing</a>
-                                        </div>
-                                        {/*end::Menu item*/}
-                                        {/*begin::Menu item*/}
-                                        <div className="menu-item px-3">
-                                            <a href="../../demo1/dist/account/statements.html"
-                                               className="menu-link px-5">Payments</a>
-                                        </div>
-                                        {/*end::Menu item*/}
-                                        {/*begin::Menu item*/}
-                                        <div className="menu-item px-3">
-                                            <a href="../../demo1/dist/account/statements.html"
-                                               className="menu-link d-flex flex-stack px-5">Statements
-                                                <span className="ms-2 lh-0" data-bs-toggle="tooltip"
-                                                      title="View your statements">
-														<i className="ki-duotone ki-information-5 fs-5">
-															<span className="path1"></span>
-															<span className="path2"></span>
-															<span className="path3"></span>
-														</i>
-													</span></a>
-                                        </div>
-                                        {/*end::Menu item*/}
-                                        {/*begin::Menu separator*/}
-                                        <div className="separator my-2"></div>
-                                        {/*end::Menu separator*/}
-                                        {/*begin::Menu item*/}
-                                        <div className="menu-item px-3">
-                                            <div className="menu-content px-3">
-                                                <label
-                                                    className="form-check form-switch form-check-custom form-check-solid">
-                                                    <input className="form-check-input w-30px h-20px" type="checkbox"
-                                                           value="1" checked="checked" name="notifications"/>
-                                                    <span
-                                                        className="form-check-label text-muted fs-7">Notifications</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        {/*end::Menu item*/}
-                                    </div>
-                                    {/*end::Menu sub*/}
-                                </div>
-                                {/*end::Menu item*/}
-                                {/*begin::Menu item*/}
-                                <div className="menu-item px-5">
-                                    <a href="../../demo1/dist/account/statements.html" className="menu-link px-5">My
-                                        Statements</a>
                                 </div>
                                 {/*end::Menu item*/}
                                 {/*begin::Menu separator*/}
@@ -254,24 +176,6 @@ const Header = () => {
                                         {/*end::Menu item*/}
                                     </div>
                                     {/*end::Menu*/}
-                                </div>
-                                {/*end::Menu item*/}
-                                {/*begin::Menu item*/}
-                                <div className="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                     data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-                                    <a href="#" className="menu-link px-5">
-												<span className="menu-title position-relative">Language
-												<span
-                                                    className="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-												<img className="w-15px h-15px rounded-1 ms-2"
-                                                     src="assets/media/flags/united-states.svg" alt=""/></span></span>
-                                    </a>
-                                </div>
-                                {/*end::Menu item*/}
-                                {/*begin::Menu item*/}
-                                <div className="menu-item px-5 my-1">
-                                    <a href="../../demo1/dist/account/settings.html" className="menu-link px-5">Account
-                                        Settings</a>
                                 </div>
                                 {/*end::Menu item*/}
                                 {/*begin::Menu item*/}
