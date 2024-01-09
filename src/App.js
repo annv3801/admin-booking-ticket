@@ -12,6 +12,24 @@ import ViewDetailGroup from "./Modules/Group/ViewDetailGroup";
 import ViewListFilm from "./Modules/Film/ViewListFilm";
 import ViewDetailFilm from "./Modules/Film/ViewDetailFilm";
 import AddFilm from "./Modules/Film/AddFilm";
+import ViewListTheater from "./Modules/Theater/ViewListTheater";
+import ViewDetailTheater from "./Modules/Theater/ViewDetailTheater";
+import AddTheater from "./Modules/Theater/AddTheater";
+import ViewListRoom from "./Modules/Room/ViewListRoom";
+import ViewDetailRoom from "./Modules/Room/ViewDetailRoom";
+import AddRoom from "./Modules/Room/AddRoom";
+import ViewListTicket from "./Modules/Ticket/ViewListTicket";
+import ViewDetailTicket from "./Modules/Ticket/ViewDetailTicket";
+import AddTicket from "./Modules/Ticket/AddTicket";
+import ViewListScheduler from "./Modules/Scheduler/ViewListScheduler";
+import ViewDetailScheduler from "./Modules/Scheduler/ViewDetailScheduler";
+import AddScheduler from "./Modules/Scheduler/AddScheduler";
+import ViewListRoomSeat from "./Modules/RoomSeat/ViewListRoomSeat";
+import ViewDetailRoomSeat from "./Modules/RoomSeat/ViewDetailRoomSeat";
+import AddRoomSeat from "./Modules/RoomSeat/AddRoomSeat";
+import ViewListSeat from "./Modules/Seat/ViewListSeat";
+import ViewDetailSeat from "./Modules/Seat/ViewDetailSeat";
+import AddSeat from "./Modules/Seat/AddSeat";
 
 
 const App = () => {
@@ -38,6 +56,42 @@ const App = () => {
                 <Route path="/film/:id" element={<Layout><ViewDetailFilm /></Layout>} />
                 <Route path="/add-film" element={<Layout><AddFilm /></Layout>} />
                 {/*  End film  */}
+
+                {/* Theater */}
+                <Route path="/theater" element={<Layout><ViewListTheater /></Layout>} />
+                <Route path="/theater/:id" element={<Layout><ViewDetailTheater /></Layout>} />
+                <Route path="/add-theater" element={<Layout><AddTheater /></Layout>} />
+                {/*  End theater  */}
+
+                {/* Room */}
+                <Route path="/room" element={<Layout><ViewListRoom /></Layout>} />
+                <Route path="/room/:id" element={<Layout><ViewDetailRoom /></Layout>} />
+                <Route path="/add-room" element={<Layout><AddRoom /></Layout>} />
+                {/*  End Room  */}
+
+                {/* Room */}
+                <Route path="/ticket" element={<Layout><ViewListTicket /></Layout>} />
+                <Route path="/ticket/:id" element={<Layout><ViewDetailTicket /></Layout>} />
+                <Route path="/add-ticket" element={<Layout><AddTicket /></Layout>} />
+                {/*  End Room  */}
+
+                {/* scheduler */}
+                <Route path="/scheduler" element={<Layout><ViewListScheduler /></Layout>} />
+                <Route path="/scheduler/:id" element={<Layout><ViewDetailScheduler /></Layout>} />
+                <Route path="/add-scheduler" element={<Layout><AddScheduler /></Layout>} />
+                {/*  End scheduler  */}
+
+                {/* room seat */}
+                <Route path="/room-seat" element={<Layout><ViewListRoomSeat /></Layout>} />
+                <Route path="/room-seat/:id" element={<Layout><ViewDetailRoomSeat /></Layout>} />
+                <Route path="/add-room-seat" element={<Layout><AddRoomSeat /></Layout>} />
+                {/*  End room seat  */}
+
+                {/* Seat */}
+                <Route path="/seat" element={<Layout><ViewListSeat /></Layout>} />
+                <Route path="/seat/:id" element={<Layout><ViewDetailSeat /></Layout>} />
+                <Route path="/add-seat" element={<Layout><AddSeat /></Layout>} />
+                {/*  End seat  */}
             </Routes>
         </Router>
     );

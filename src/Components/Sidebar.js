@@ -37,197 +37,23 @@ const Sidebar = () => {
                          data-kt-scroll-save-state="true">
                         <div className="menu menu-column menu-rounded menu-sub-indention fw-semibold fs-6"
                              id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
-                            <div data-kt-menu-trigger="click" className="menu-item here show menu-accordion">
-                                <span className="menu-link">
-												<span className="menu-icon">
-													<i className="ki-duotone ki-element-11 fs-2">
-														<span className="path1"></span>
-														<span className="path2"></span>
-														<span className="path3"></span>
-														<span className="path4"></span>
-													</i>
-												</span>
-												<span className="menu-title">Dashboards</span>
-												<span className="menu-arrow"></span>
-											</span>
-                                <div className="menu-sub menu-sub-accordion">
-                                    <div className="menu-item">
-                                        <a className="menu-link active" href="../../demo1/dist/index.html">
+                            <div className="menu-item">
+                                <a className="menu-link"
+                                   href="/dashboard">
 														<span className="menu-bullet">
 															<span className="bullet bullet-dot"></span>
 														</span>
-                                            <span className="menu-title">Default</span>
-                                        </a>
-                                    </div>
-                                    <div className="menu-item">
-                                        <a className="menu-link" href="../../demo1/dist/dashboards/ecommerce.html">
-														<span className="menu-bullet">
-															<span className="bullet bullet-dot"></span>
-														</span>
-                                            <span className="menu-title">eCommerce</span>
-                                        </a>
-                                    </div>
-                                    <div className="menu-item">
-                                        <a className="menu-link" href="../../demo1/dist/dashboards/projects.html">
-														<span className="menu-bullet">
-															<span className="bullet bullet-dot"></span>
-														</span>
-                                            <span className="menu-title">Projects</span>
-                                        </a>
-                                    </div>
-                                    <div className="menu-item">
-                                        <a className="menu-link" href="../../demo1/dist/dashboards/online-courses.html">
-														<span className="menu-bullet">
-															<span className="bullet bullet-dot"></span>
-														</span>
-                                            <span className="menu-title">Online Courses</span>
-                                        </a>
-                                    </div>
-                                    <div className="menu-item">
-                                        <a className="menu-link" href="../../demo1/dist/dashboards/marketing.html">
-														<span className="menu-bullet">
-															<span className="bullet bullet-dot"></span>
-														</span>
-                                            <span className="menu-title">Marketing</span>
-                                        </a>
-                                    </div>
-                                    <div className="menu-inner flex-column collapse"
-                                         id="kt_app_sidebar_menu_dashboards_collapse">
-                                        <div className="menu-item">
-                                            <a className="menu-link" href="../../demo1/dist/dashboards/bidding.html">
-															<span className="menu-bullet">
-																<span className="bullet bullet-dot"></span>
-															</span>
-                                                <span className="menu-title">Bidding</span>
-                                            </a>
-                                        </div>
-                                        <div className="menu-item">
-                                            <a className="menu-link" href="../../demo1/dist/dashboards/pos.html">
-															<span className="menu-bullet">
-																<span className="bullet bullet-dot"></span>
-															</span>
-                                                <span className="menu-title">POS System</span>
-                                            </a>
-                                        </div>
-                                        <div className="menu-item">
-                                            <a className="menu-link"
-                                               href="../../demo1/dist/dashboards/call-center.html">
-															<span className="menu-bullet">
-																<span className="bullet bullet-dot"></span>
-															</span>
-                                                <span className="menu-title">Call Center</span>
-                                            </a>
-                                        </div>
-                                        <div className="menu-item">
-                                            <a className="menu-link" href="../../demo1/dist/dashboards/logistics.html">
-															<span className="menu-bullet">
-																<span className="bullet bullet-dot"></span>
-															</span>
-                                                <span className="menu-title">Logistics</span>
-                                            </a>
-                                        </div>
-                                        <div className="menu-item">
-                                            <a className="menu-link"
-                                               href="../../demo1/dist/dashboards/website-analytics.html">
-															<span className="menu-bullet">
-																<span className="bullet bullet-dot"></span>
-															</span>
-                                                <span className="menu-title">Website Analytics</span>
-                                            </a>
-                                        </div>
-                                        <div className="menu-item">
-                                            <a className="menu-link"
-                                               href="../../demo1/dist/dashboards/finance-performance.html">
-															<span className="menu-bullet">
-																<span className="bullet bullet-dot"></span>
-															</span>
-                                                <span className="menu-title">Finance Performance</span>
-                                            </a>
-                                        </div>
-                                        <div className="menu-item">
-                                            <a className="menu-link"
-                                               href="../../demo1/dist/dashboards/store-analytics.html">
-															<span className="menu-bullet">
-																<span className="bullet bullet-dot"></span>
-															</span>
-                                                <span className="menu-title">Store Analytics</span>
-                                            </a>
-                                        </div>
-                                        <div className="menu-item">
-                                            <a className="menu-link" href="../../demo1/dist/dashboards/social.html">
-															<span className="menu-bullet">
-																<span className="bullet bullet-dot"></span>
-															</span>
-                                                <span className="menu-title">Social</span>
-                                            </a>
-                                        </div>
-                                        <div className="menu-item">
-                                            <a className="menu-link" href="../../demo1/dist/dashboards/delivery.html">
-															<span className="menu-bullet">
-																<span className="bullet bullet-dot"></span>
-															</span>
-                                                <span className="menu-title">Delivery</span>
-                                            </a>
-                                        </div>
-                                        <div className="menu-item">
-                                            <a className="menu-link" href="../../demo1/dist/dashboards/crypto.html">
-															<span className="menu-bullet">
-																<span className="bullet bullet-dot"></span>
-															</span>
-                                                <span className="menu-title">Crypto</span>
-                                            </a>
-                                        </div>
-                                        <div className="menu-item">
-                                            <a className="menu-link" href="../../demo1/dist/dashboards/school.html">
-															<span className="menu-bullet">
-																<span className="bullet bullet-dot"></span>
-															</span>
-                                                <span className="menu-title">School</span>
-                                            </a>
-                                        </div>
-                                        <div className="menu-item">
-                                            <a className="menu-link" href="../../demo1/dist/dashboards/podcast.html">
-															<span className="menu-bullet">
-																<span className="bullet bullet-dot"></span>
-															</span>
-                                                <span className="menu-title">Podcast</span>
-                                            </a>
-                                        </div>
-                                        <div className="menu-item">
-                                            <a className="menu-link" href="../../demo1/dist/landing.html">
-															<span className="menu-bullet">
-																<span className="bullet bullet-dot"></span>
-															</span>
-                                                <span className="menu-title">Landing</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="menu-item">
-                                        <div className="menu-content">
-                                            <a className="btn btn-flex btn-color-primary d-flex flex-stack fs-base p-0 ms-2 mb-2 toggle collapsible collapsed"
-                                               data-bs-toggle="collapse" href="#kt_app_sidebar_menu_dashboards_collapse"
-                                               data-kt-toggle-text="Show Less">
-                                                <span data-kt-toggle-text-target="true">Show 12 More</span>
-                                                <i className="ki-duotone ki-minus-square toggle-on fs-2 me-0">
-                                                    <span className="path1"></span>
-                                                    <span className="path2"></span>
-                                                </i>
-                                                <i className="ki-duotone ki-plus-square toggle-off fs-2 me-0">
-                                                    <span className="path1"></span>
-                                                    <span className="path2"></span>
-                                                    <span className="path3"></span>
-                                                </i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                    <span className="menu-title">Dashboards</span>
+                                </a>
                             </div>
+
                             <div className="menu-item pt-5">
                                 <div className="menu-content">
                                     <span className="menu-heading fw-bold text-uppercase fs-7">Pages</span>
                                 </div>
                             </div>
                             {/* Category */}
+
                             <div data-kt-menu-trigger="click" className="menu-item menu-accordion">
                                 <span className="menu-link">
 												<span className="menu-icon">
@@ -333,6 +159,150 @@ const Sidebar = () => {
                                 </div>
                             </div>
                             {/* End Film */}
+
+                            {/* Theater */}
+                            <div data-kt-menu-trigger="click" className="menu-item menu-accordion">
+                                <span className="menu-link">
+                                    <span className="menu-icon">
+                                        <i className="ki-duotone ki-address-book fs-2">
+                                            <span className="path1"></span>
+                                            <span className="path2"></span>
+                                            <span className="path3"></span>
+                                        </i>
+                                    </span>
+                                    <span className="menu-title">Theater Management</span>
+                                    <span className="menu-arrow"></span>
+                                </span>
+                                <div className="menu-sub menu-sub-accordion">
+                                    <div className="menu-item">
+                                        <a className="menu-link"
+                                           href="/theater">
+														<span className="menu-bullet">
+															<span className="bullet bullet-dot"></span>
+														</span>
+                                            <span className="menu-title">View List Theater</span>
+                                        </a>
+                                    </div>
+                                    <div className="menu-item">
+                                        <a className="menu-link"
+                                           href="/add-theater">
+														<span className="menu-bullet">
+															<span className="bullet bullet-dot"></span>
+														</span>
+                                            <span className="menu-title">Add Theater</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* End Theater */}
+
+                            {/* Room */}
+                            <div data-kt-menu-trigger="click" className="menu-item menu-accordion">
+                                <span className="menu-link">
+                                    <span className="menu-icon">
+                                        <i className="ki-duotone ki-address-book fs-2">
+                                            <span className="path1"></span>
+                                            <span className="path2"></span>
+                                            <span className="path3"></span>
+                                        </i>
+                                    </span>
+                                    <span className="menu-title">Room Management</span>
+                                    <span className="menu-arrow"></span>
+                                </span>
+                                <div className="menu-sub menu-sub-accordion">
+                                    <div className="menu-item">
+                                        <a className="menu-link"
+                                           href="/room">
+														<span className="menu-bullet">
+															<span className="bullet bullet-dot"></span>
+														</span>
+                                            <span className="menu-title">View List Room</span>
+                                        </a>
+                                    </div>
+                                    <div className="menu-item">
+                                        <a className="menu-link"
+                                           href="/add-room">
+														<span className="menu-bullet">
+															<span className="bullet bullet-dot"></span>
+														</span>
+                                            <span className="menu-title">Add Room</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* End Room */}
+
+                            {/* Ticket */}
+                            <div data-kt-menu-trigger="click" className="menu-item menu-accordion">
+                                <span className="menu-link">
+                                    <span className="menu-icon">
+                                        <i className="ki-duotone ki-address-book fs-2">
+                                            <span className="path1"></span>
+                                            <span className="path2"></span>
+                                            <span className="path3"></span>
+                                        </i>
+                                    </span>
+                                    <span className="menu-title">Ticket Management</span>
+                                    <span className="menu-arrow"></span>
+                                </span>
+                                <div className="menu-sub menu-sub-accordion">
+                                    <div className="menu-item">
+                                        <a className="menu-link"
+                                           href="/ticket">
+														<span className="menu-bullet">
+															<span className="bullet bullet-dot"></span>
+														</span>
+                                            <span className="menu-title">View List Ticket</span>
+                                        </a>
+                                    </div>
+                                    <div className="menu-item">
+                                        <a className="menu-link"
+                                           href="/add-ticket">
+														<span className="menu-bullet">
+															<span className="bullet bullet-dot"></span>
+														</span>
+                                            <span className="menu-title">Add Ticket</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* End ticket */}
+
+                            {/* Scheduler */}
+                            <div data-kt-menu-trigger="click" className="menu-item menu-accordion">
+                                <span className="menu-link">
+                                    <span className="menu-icon">
+                                        <i className="ki-duotone ki-address-book fs-2">
+                                            <span className="path1"></span>
+                                            <span className="path2"></span>
+                                            <span className="path3"></span>
+                                        </i>
+                                    </span>
+                                    <span className="menu-title">Scheduler Management</span>
+                                    <span className="menu-arrow"></span>
+                                </span>
+                                <div className="menu-sub menu-sub-accordion">
+                                    <div className="menu-item">
+                                        <a className="menu-link"
+                                           href="/scheduler">
+														<span className="menu-bullet">
+															<span className="bullet bullet-dot"></span>
+														</span>
+                                            <span className="menu-title">View List Scheduler</span>
+                                        </a>
+                                    </div>
+                                    <div className="menu-item">
+                                        <a className="menu-link"
+                                           href="/add-scheduler">
+														<span className="menu-bullet">
+															<span className="bullet bullet-dot"></span>
+														</span>
+                                            <span className="menu-title">Add Scheduler</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* End scheduler */}
 
                         </div>
                     </div>

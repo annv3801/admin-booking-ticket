@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  booking_admin:
+    container_name: booking_admin_lasest
+    image: booking_admin_lasest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        progress: plain
+    command: serve -l 19065 /app/build -s
+    ports:
+      - "19065:19065"
+    restart: always

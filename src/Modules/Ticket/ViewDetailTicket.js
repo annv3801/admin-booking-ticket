@@ -1,0 +1,138 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import {useNavigate, useParams} from "react-router-dom";
+
+const ViewDetailTicket = () => {
+    const { id } = useParams();
+    const [movies, setMovies] = useState([]);
+    const [updatedName, setUpdatedName] = useState('');
+    const [updatedType, setUpdatedType] = useState(0);
+    const [updatedPrice, setUpdatedPrice] = useState('');
+    const [updatedColor, setUpdatedColor] = useState('');
+    const config = {
+        headers: {
+            authorization: "Bearer " + localStorage.getItem("token")
+        }
+    };
+    const navigate = useNavigate();
+    const fetchMovies = async () => {
+        try {
+            const response = await axios.get(`https://cinema.dummywebsite.me/ticket/View-ticket/${id}`);
+            setMovies(response.data);
+            setUpdatedName(response.data?.data?.title || '');
+            setUpdatedType(response.data?.data?.type || 0);
+            setUpdatedColor(response.data?.data?.color || '');
+            setUpdatedPrice(response.data?.data?.price || 0);
+        } catch (error) {
+            console.error('Error fetching movies:', error);
+        }
+    };
+
+    const handleUpdate = async () => {
+        try {
+            // Make an API call to update the category name
+            await axios.put(`https://cinema.dummywebsite.me/ticket/Update-ticket`, {
+                id: id,
+                title: updatedName,
+                type: parseInt(updatedType),
+                price: parseFloat(updatedPrice),
+                color: updatedColor
+            }, config);
+            // Optionally, you can refetch the data to update the UI with the latest changes
+            await fetchMovies()
+            .then(() => {
+                navigate('/ticket');
+            });
+        } catch (error) {
+            console.error('Error updating theater name:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchMovies();
+    }, []);
+
+
+    return (
+        <div id="kt_app_content_container" className="app-container container-fluid">
+            <div className="card mb-5 mb-xl-8">
+                {/*begin::Header*/}
+                <div className="card-header border-0 pt-5">
+                    <h3 className="card-title align-items-start flex-column">
+                        <span className="card-label fw-bold fs-3 mb-1">View Detail Ticket</span>
+                    </h3>
+                </div>
+                {/*end::Header*/}
+                {/*begin::Body*/}
+                <div className="card-body py-3">
+                    <div className="fv-row mb-8">
+                        <label className="d-flex align-items-center fs-5 fw-semibold mb-2">
+                            <span className="required">Name</span>
+                        </label>
+                        <input
+                            type="text"
+                            className="form-control form-control-lg form-control-solid"
+                            name="name"
+                            placeholder="Input category name"
+                            value={updatedName}
+                            onChange={(e) => setUpdatedName(e.target.value)}
+                            />
+                    </div>
+                    <div className="fv-row mb-8">
+                        <label className="d-flex align-items-center fs-5 fw-semibold mb-2">
+                            <span className="required">Type</span>
+                        </label>
+                        <input
+                            type="number"
+                            className="form-control form-control-lg form-control-solid"
+                            name="type"
+                            placeholder="Input type"
+                            value={updatedType}
+                            onChange={(e) => setUpdatedType(e.target.value)}
+                        />
+                    </div>
+                    <div className="fv-row mb-8">
+                        <label className="d-flex align-items-center fs-5 fw-semibold mb-2">
+                            <span className="required">Price</span>
+                        </label>
+                        <input
+                            type="text"
+                            className="form-control form-control-lg form-control-solid"
+                            name="price"
+                            placeholder="Input price"
+                            value={updatedPrice}
+                            onChange={(e) => setUpdatedPrice(e.target.value)}
+                        />
+                    </div>
+                    <div className="fv-row mb-8">
+                        <label className="d-flex align-items-center fs-5 fw-semibold mb-2">
+                            <span className="required">Color</span>
+                        </label>
+                        <input
+                            type="text"
+                            className="form-control form-control-lg form-control-solid"
+                            name="color"
+                            placeholder="Input color"
+                            value={updatedColor}
+                            onChange={(e) => setUpdatedColor(e.target.value)}
+                        />
+                    </div>
+                    <div className="d-flex flex-stack mb-8">
+                        <div></div>
+                        <button
+                            type="button"
+                            className="btn btn-lg btn-primary"
+                            data-kt-element="settings-next"
+                            onClick={handleUpdate}
+                        >
+                            <span className="indicator-label">Update</span>
+                        </button>
+                    </div>
+                    {/*end::Table container*/}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default ViewDetailTicket;
