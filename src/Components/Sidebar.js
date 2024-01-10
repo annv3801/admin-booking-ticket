@@ -53,7 +53,22 @@ const Sidebar = () => {
                                 </div>
                             </div>
                             {/* Category */}
+                            <div data-kt-menu-trigger="click" className="menu-item menu-accordion">
 
+                            <div className="menu-item">
+                                <a className="menu-link"
+                                   href="/booking">
+                                    <span className="menu-icon">
+													<i className="ki-duotone ki-address-book fs-2">
+														<span className="path1"></span>
+														<span className="path2"></span>
+														<span className="path3"></span>
+													</i>
+												</span>
+                                    <span className="menu-title">View List Booking</span>
+                                </a>
+                            </div>
+                            </div>
                             <div data-kt-menu-trigger="click" className="menu-item menu-accordion">
                                 <span className="menu-link">
 												<span className="menu-icon">

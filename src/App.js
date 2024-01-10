@@ -30,6 +30,7 @@ import AddRoomSeat from "./Modules/RoomSeat/AddRoomSeat";
 import ViewListSeat from "./Modules/Seat/ViewListSeat";
 import ViewDetailSeat from "./Modules/Seat/ViewDetailSeat";
 import AddSeat from "./Modules/Seat/AddSeat";
+import ViewListBooking from "./Modules/Booking/ViewListBooking";
 
 
 const App = () => {
@@ -92,6 +93,10 @@ const App = () => {
                 <Route path="/seat/:id" element={<Layout><ViewDetailSeat /></Layout>} />
                 <Route path="/add-seat" element={<Layout><AddSeat /></Layout>} />
                 {/*  End seat  */}
+
+                {/* Booking */}
+                <Route path="/booking" element={<Layout><ViewListBooking /></Layout>} />
+                {/* End Booking */}
             </Routes>
         </Router>
     );
