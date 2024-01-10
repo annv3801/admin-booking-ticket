@@ -12,10 +12,10 @@ const Sidebar = () => {
              data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start"
              data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
             <div className="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
-                <a href="../../demo1/dist/index.html">
-                    <img alt="Logo" src="assets/media/logos/default-dark.svg"
+                <a href="/">
+                    <img alt="Logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a3/CGV_logo.svg"
                          className="h-25px app-sidebar-logo-default"/>
-                    <img alt="Logo" src="assets/media/logos/default-small.svg"
+                    <img alt="Logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a3/CGV_logo.svg"
                          className="h-20px app-sidebar-logo-minimize"/>
                 </a>
                 <div id="kt_app_sidebar_toggle"
