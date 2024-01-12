@@ -8,6 +8,7 @@ const ViewListBooking = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const pageSize = 5;
     const [total, setTotal] = useState(0);
+    const [searchValue, setSearchValue] = useState('');
     const config = {
         headers: {
             authorization: "Bearer " + localStorage.getItem("token")
@@ -19,7 +20,19 @@ const ViewListBooking = () => {
                 pageSize,
                 currentPage,
                 accountId: 0,
-                tab: ""
+                tab: "",
+                searchByFields: [
+                    {
+                        searchFieldName: "id",
+                        searchValue: searchValue // add the search value here
+                    }
+                ],
+                sortByFields: [
+                    {
+                        colName: "createdTime",
+                        sortDirection: "DESC"
+                    }
+                ],
             });
 
             setMovies(response.data);
@@ -31,7 +44,7 @@ const ViewListBooking = () => {
 
     useEffect(() => {
         fetchMovies();
-    }, [currentPage]);
+    }, [currentPage, searchValue]);
 
     const handlePageChange = (newPage) => {
         setCurrentPage(newPage);
@@ -54,18 +67,34 @@ const ViewListBooking = () => {
                 }
             })
     }
+
+    const handleSearch = (e) => {
+        // Update the searchValue state when the input value changes
+        setSearchValue(e.target.value);
+    };
+
     return (
         <div id="kt_app_content_container" className="app-container container-fluid">
             <div className="card mb-5 mb-xl-8">
                 {/*begin::Header*/}
-                <div className="card-header border-0 pt-5">
+                <div className="card-header border-0 pt-5 d-flex justify-content-between">
                     <h3 className="card-title align-items-start flex-column">
                         <span className="card-label fw-bold fs-3 mb-1">View List Booking Management</span>
                     </h3>
-                    {/*<div className="card-toolbar">
-                        <a href="/add-category" className="btn btn-sm btn-light btn-active-primary">
-                            <i className="ki-duotone ki-plus fs-2"></i>New Category</a>
-                    </div>*/}
+                    <form className="position-relative" autoComplete="off">
+                        <i className="ki-duotone ki-magnifier fs-3 text-gray-500 position-absolute ms-5 translate-middle-y"
+                           style={{top: '43%'}}><span
+                            className="path1"></span><span className="path2"></span></i>
+
+                        <input
+                            type="text"
+                            className="form-control form-control-solid px-13"
+                            name="search"
+                            value={searchValue} // bind the value to the searchValue state
+                            onChange={handleSearch} // handle input changes
+                            placeholder="Search by id..."
+                        />
+                    </form>
                 </div>
                 {/*end::Header*/}
                 {/*begin::Body*/}
@@ -77,7 +106,7 @@ const ViewListBooking = () => {
                             {/*begin::Table head*/}
                             <thead>
                             <tr className="fw-bold text-muted bg-light">
-                                <th className="min-w-200px">Name</th>
+                            <th className="min-w-200px">Name</th>
                                 <th className="min-w-200px">Film</th>
                                 <th className="min-w-200px">Scheduler - Room</th>
                                 <th className="min-w-200px">Time</th>
@@ -105,7 +134,7 @@ const ViewListBooking = () => {
                                     </td>
                                     <td>
                                         <a href="#"
-                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{new Date(movie.seats[0].scheduler.startTime).toLocaleDateString('en-GB')} - {new Date(movie.seats[0].scheduler.startTime).toLocaleTimeString('en-GB', {hour12: false,})} -> {new Date(movie.seats[0].scheduler.endTime).toLocaleDateString('en-GB')} - {new Date(movie.seats[0].scheduler.endTime).toLocaleTimeString('en-GB', {hour12: false,})}</a>
+                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{new Date(new Date(movie.seats[0].scheduler.startTime).getTime() - 7 * 60 * 60 * 1000).toLocaleDateString('en-GB')} - {new Date(new Date(movie.seats[0].scheduler.startTime).getTime() - 7 * 60 * 60 * 1000).toLocaleTimeString('en-GB', {hour12: false})} - {new Date(new Date(movie.seats[0].scheduler.endTime).getTime() - 7 * 60 * 60 * 1000).toLocaleDateString('en-GB')} - {new Date(new Date(movie.seats[0].scheduler.endTime).getTime() - 7 * 60 * 60 * 1000).toLocaleTimeString('en-GB', {hour12: false})}</a>
                                     </td>
                                     <td>
                                         <span
@@ -113,7 +142,7 @@ const ViewListBooking = () => {
                                     </td>
                                     <td>
                                         <span
-                                            className={`badge ${movie.isReceived == 1 ? "badge-success" : "badge-danger"} `}>{movie.isReceived == 1 ? "Đã nhận" : "Chưa nhận"}</span>
+                                            className={`badge ${movie.isReceived == 1 ? "badge-success" : "badge-danger"} `}>{movie.isReceived == 1 ? "Received" : "Not Received"}</span>
                                     </td>
                                     <td className="text-end">
                                         <a onClick={() => handleDelete(movie.id)}

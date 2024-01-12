@@ -17,7 +17,7 @@ const ViewListScheduler = () => {
         try {
             const response = await axios.post(`https://cinema.dummywebsite.me/scheduler/View-List-Schedulers`, {
                 pageSize,
-                currentPage,
+                currentPage
             });
 
             setMovies(response.data);
@@ -96,10 +96,10 @@ const ViewListScheduler = () => {
                                         <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.film.name}</a>
                                     </td>
                                     <td>
-                                        <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{new Date(movie.startTime).toLocaleDateString('en-GB')} - {new Date(movie.startTime).toLocaleTimeString('en-GB', {hour12: false,})}</a>
+                                        <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{new Date(new Date(movie.startTime).getTime() - 7 * 60 * 60 * 1000).toLocaleDateString('en-GB')} - {new Date(new Date(movie.startTime).getTime() - 7 * 60 * 60 * 1000).toLocaleTimeString('en-GB', {hour12: false})}</a>
                                     </td>
                                     <td>
-                                        <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{new Date(movie.endTime).toLocaleDateString('en-GB')} - {new Date(movie.endTime).toLocaleTimeString('en-GB', {hour12: false,})}</a>
+                                        <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{new Date(new Date(movie.endTime).getTime() - 7 * 60 * 60 * 1000).toLocaleDateString('en-GB')} - {new Date(new Date(movie.endTime).getTime() - 7 * 60 * 60 * 1000).toLocaleTimeString('en-GB', {hour12: false})}</a>
                                     </td>
                                     <td>
                                         <span className="badge badge-light-success">{movie.status}</span>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 
 const Seat = ({ seat, onSeatClick, selectedTicketColor }) => {
     const handleClick = () => {
@@ -53,6 +53,7 @@ const ViewDetailSeat = () => {
     const [selectedTicketColor, setSelectedTicketColor] = useState(null);
     const [selectedPairs, setSelectedPairs] = useState([]);
     const [firstSeatClick, setFirstSeatClick] = useState(true);
+    const navigate = useNavigate();
 
     const config = {
         headers: {
@@ -62,7 +63,9 @@ const ViewDetailSeat = () => {
 
     const createSeat = async (seatData) => {
         try {
-            const response = await axios.post('https://cinema.dummywebsite.me/Seat/Create-Seat', seatData, config);
+            const response = await axios.post('https://cinema.dummywebsite.me/Seat/Create-Seat', seatData, config).then(() => {
+                navigate('/scheduler');
+            });;
             console.log(response.data); // Handle the response as needed
         } catch (error) {
             console.error('Error creating seat:', error);

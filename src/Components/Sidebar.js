@@ -319,6 +319,42 @@ const Sidebar = () => {
                             </div>
                             {/* End scheduler */}
 
+                            {/* Slide */}
+                            <div data-kt-menu-trigger="click" className="menu-item menu-accordion">
+                                <span className="menu-link">
+                                    <span className="menu-icon">
+                                        <i className="ki-duotone ki-address-book fs-2">
+                                            <span className="path1"></span>
+                                            <span className="path2"></span>
+                                            <span className="path3"></span>
+                                        </i>
+                                    </span>
+                                    <span className="menu-title">Slide Management</span>
+                                    <span className="menu-arrow"></span>
+                                </span>
+                                <div className="menu-sub menu-sub-accordion">
+                                    <div className="menu-item">
+                                        <a className="menu-link"
+                                           href="/scheduler">
+														<span className="menu-bullet">
+															<span className="bullet bullet-dot"></span>
+														</span>
+                                            <span className="menu-title">View List Slide</span>
+                                        </a>
+                                    </div>
+                                    <div className="menu-item">
+                                        <a className="menu-link"
+                                           href="/add-scheduler">
+														<span className="menu-bullet">
+															<span className="bullet bullet-dot"></span>
+														</span>
+                                            <span className="menu-title">Add Slide</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {/* End Slide */}
+
                         </div>
                     </div>
                 </div>
