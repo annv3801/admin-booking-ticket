@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const AddNews = () => {
     const [updatedName, setUpdatedName] = useState('');
     const [updatedDescription, setUpdatedDescription] = useState('');
+    const [updatedContent, setUpdatedContent] = useState('');
     const [filmImage, setFilmImage] = useState('');
     const navigate = useNavigate();
 
@@ -13,11 +14,12 @@ const AddNews = () => {
             const formData = new FormData();
             formData.append('title', updatedName);
             formData.append('description', updatedDescription);
+            formData.append('content', updatedContent);
             // Append the file directly to the FormData
             formData.append('image', filmImage);
 
             // Make an API call to update the film using FormData
-            await axios.put(`https://cinema.dummywebsite.tech/News/Create-News`, formData, {
+            await axios.post(`https://cinema.dummywebsite.tech/News/Create-News`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': 'Bearer ' + localStorage.getItem('token'),
@@ -75,6 +77,18 @@ const AddNews = () => {
                     </div>
                     <div className="fv-row mb-8">
                         <label className="d-flex align-items-center fs-5 fw-semibold mb-2">
+                            <span className="required">Content</span>
+                        </label>
+                        <textarea
+                            className="form-control form-control-lg form-control-solid"
+                            name="content"
+                            placeholder="Input content"
+                            value={updatedContent}
+                            onChange={(e) => setUpdatedContent(e.target.value)}
+                        />
+                    </div>
+                    <div className="fv-row mb-8">
+                        <label className="d-flex align-items-center fs-5 fw-semibold mb-2">
                             <span className="required">Image</span>
                         </label>
                         <input
@@ -91,7 +105,7 @@ const AddNews = () => {
                                 src={`https://cinema.dummywebsite.tech/resources/${filmImage}`}
                                 alt="Film Image"
                                 className="img-fluid"
-                                style={{ maxWidth: '100%', maxHeight: '200px' }}
+                                style={{maxWidth: '100%', maxHeight: '200px'}}
                             />
                         </div>
                     )}
