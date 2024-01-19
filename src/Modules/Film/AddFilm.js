@@ -44,7 +44,7 @@ const AddFilm = () => {
             formData.append('language', updatedLanguage);
             formData.append('rated', updatedRated);
             formData.append('trailer', updatedTrailer);
-            formData.append('totalRating', updatedTotalRating);
+            formData.append('totalRating', 0);
 
             // Append the file directly to the FormData
             formData.append('image', filmImage);
@@ -93,6 +93,7 @@ const AddFilm = () => {
     // Handle multiple selections
     const handleTypeChange = (e) => {
         const selectedValues = Array.from(e.target.selectedOptions, (option) => option.value);
+        console.log("selectedValues", selectedValues)
         setSelectedCategories(selectedValues);
     };
 
@@ -131,6 +132,19 @@ const AddFilm = () => {
                     </div>
                     <div className="fv-row mb-8">
                         <label className="d-flex align-items-center fs-5 fw-semibold mb-2">
+                            <span className="required">Slug</span>
+                        </label>
+                        <input
+                            type="text"
+                            className="form-control form-control-lg form-control-solid"
+                            name="slug"
+                            placeholder="Input slug"
+                            value={updatedSlug}
+                            onChange={(e) => setUpdatedSlug(e.target.value)}
+                        />
+                    </div>
+                    <div className="fv-row mb-8">
+                        <label className="d-flex align-items-center fs-5 fw-semibold mb-2">
                             <span className="required">Description</span>
                         </label>
                         <textarea
@@ -159,7 +173,7 @@ const AddFilm = () => {
                                 src={`https://cinema.dummywebsite.tech/resources/${filmImage}`}
                                 alt="Film Image"
                                 className="img-fluid"
-                                style={{ maxWidth: '100%', maxHeight: '200px' }}
+                                style={{maxWidth: '100%', maxHeight: '200px'}}
                             />
                         </div>
                     )}

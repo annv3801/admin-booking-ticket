@@ -59,7 +59,7 @@ const ViewListGroup = () => {
         <div id="kt_app_content_container" className="app-container container-fluid">
             <div className="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                 <h1 className="page-heading d-flex text-dark fw-bold flex-column justify-content-center mb-5">View
-                    List Group Management</h1>
+                    List Categories Management</h1>
             </div>
             <div className="card mb-5 mb-xl-8">
                 {/*begin::Header*/}
@@ -80,7 +80,7 @@ const ViewListGroup = () => {
                     </form>
                     <div className="card-toolbar">
                         <a href="/add-Group" className="btn btn-sm btn-light btn-active-primary">
-                            <i className="ki-duotone ki-plus fs-2"></i>New Group</a>
+                            <i className="ki-duotone ki-plus fs-2"></i>New Category</a>
                     </div>
                 </div>
                 {/*end::Header*/}

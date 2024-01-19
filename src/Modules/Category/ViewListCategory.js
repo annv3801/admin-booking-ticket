@@ -65,7 +65,7 @@ const ViewListCategory = () => {
     return (
         <div id="kt_app_content_container" className="app-container container-fluid">
             <div className="page-title d-flex flex-column justify-content-center flex-wrap me-3">
-                <h1 className="page-heading d-flex text-dark fw-bold flex-column justify-content-center mb-5">View List Category Management</h1>
+                <h1 className="page-heading d-flex text-dark fw-bold flex-column justify-content-center mb-5">View List Genre Management</h1>
             </div>
             <div className="card mb-5 mb-xl-8">
                 {/*begin::Header*/}
@@ -87,7 +87,7 @@ const ViewListCategory = () => {
                     <div className="d-flex ">
                         <div className="card-toolbar">
                             <a href="/add-category" className="btn btn-sm btn-light btn-active-primary">
-                                <i className="ki-duotone ki-plus fs-2"></i>New Category</a>
+                                <i className="ki-duotone ki-plus fs-2"></i>New Genre</a>
                         </div>
 
                     </div>

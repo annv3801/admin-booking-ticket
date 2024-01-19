@@ -37,7 +37,7 @@ const AddGroup = () => {
                 {/*begin::Header*/}
                 <div className="card-header border-0 pt-5">
                     <h3 className="card-title align-items-start flex-column">
-                        <span className="card-label fw-bold fs-3 mb-1">Add Group</span>
+                        <span className="card-label fw-bold fs-3 mb-1">Add Category</span>
                     </h3>
                 </div>
                 {/*end::Header*/}
