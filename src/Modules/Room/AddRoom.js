@@ -18,7 +18,7 @@ const AddRoom = () => {
             // Make an API call to update the category name
             await axios
                 .post(
-                    'https://cinema.dummywebsite.me/Room/Create-Room',
+                    'https://cinema.dummywebsite.tech/Room/Create-Room',
                     {
                         name: updatedName,
                         theaterId: updatedTheater,
@@ -35,7 +35,7 @@ const AddRoom = () => {
 
     const fetchGroups = async () => {
         try {
-            const response = await axios.post('https://cinema.dummywebsite.me/theater/View-List-Theaters', {}, config);
+            const response = await axios.post('https://cinema.dummywebsite.tech/theater/View-List-Theaters', {}, config);
             // Assuming the API response contains an array of categories
             const theaters = response?.data?.data?.data;
             setTheaterOptions(theaters);

@@ -15,7 +15,7 @@ const ViewListBooking = () => {
     };
     const fetchMovies = async () => {
         try {
-            const response = await axios.post(`https://cinema.dummywebsite.me/Booking/View-List-Bookings`, {
+            const response = await axios.post(`https://cinema.dummywebsite.tech/Booking/View-List-Bookings`, {
                 pageSize,
                 currentPage,
                 accountId: 0,
@@ -50,7 +50,7 @@ const ViewListBooking = () => {
     };
 
     const handleDelete = (id) => {
-        axios.delete("https://cinema.dummywebsite.me/Booking/Cancel-Booking/" + id, config)
+        axios.delete("https://cinema.dummywebsite.tech/Booking/Cancel-Booking/" + id, config)
             .then(res => {
                 if (res.status === 200) {
                     window.location.reload()
@@ -59,7 +59,7 @@ const ViewListBooking = () => {
     }
 
     const handleReceived = (id) => {
-        axios.put("https://cinema.dummywebsite.me/Booking/Change-Status-Booking/" + id, config)
+        axios.put("https://cinema.dummywebsite.tech/Booking/Change-Status-Booking/" + id, config)
             .then(res => {
                 if (res.status === 200) {
                     window.location.reload()

@@ -64,7 +64,7 @@ const ViewDetailSeat = () => {
 
     useEffect(() => {
         // Fetch list of schedulers
-        axios.get(`https://cinema.dummywebsite.me/Scheduler/View-Scheduler/${id}`, {
+        axios.get(`https://cinema.dummywebsite.tech/Scheduler/View-Scheduler/${id}`, {
             pageSize: 100,
             currentPage: 1,
         })
@@ -73,7 +73,7 @@ const ViewDetailSeat = () => {
             });
 
         // Fetch list of tickets
-        axios.post(`https://cinema.dummywebsite.me/Ticket/View-List-Tickets`, {
+        axios.post(`https://cinema.dummywebsite.tech/Ticket/View-List-Tickets`, {
             pageSize: 100,
             currentPage: 1,
         })
@@ -84,7 +84,7 @@ const ViewDetailSeat = () => {
 
     const fetchSeats = async () => {
         try {
-            const response = await axios.get(`https://cinema.dummywebsite.me/Seat/View-List-Seats-By-Scheduler/${id}`, config);
+            const response = await axios.get(`https://cinema.dummywebsite.tech/Seat/View-List-Seats-By-Scheduler/${id}`, config);
             if (response.data?.data?.length > 0) {
                 setCountSeat(response.data?.data?.length);
                 console.log("setCountSeat",response.data?.data?.length)

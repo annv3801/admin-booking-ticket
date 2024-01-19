@@ -16,7 +16,7 @@ const ViewListTicket = () => {
     };
     const fetchMovies = async () => {
         try {
-            const response = await axios.post(`https://cinema.dummywebsite.me/Ticket/View-List-Tickets`, {
+            const response = await axios.post(`https://cinema.dummywebsite.tech/Ticket/View-List-Tickets`, {
                 pageSize,
                 currentPage,
                 searchByFields: [
@@ -49,7 +49,7 @@ const ViewListTicket = () => {
     };
 
     const handleDelete = (id) => {
-        axios.delete("https://cinema.dummywebsite.me/ticket/delete-ticket/" + id, config)
+        axios.delete("https://cinema.dummywebsite.tech/ticket/delete-ticket/" + id, config)
             .then(res => {
                 if (res.status === 200) {
                     window.location.reload()

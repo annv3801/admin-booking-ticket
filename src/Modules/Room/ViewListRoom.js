@@ -16,7 +16,7 @@ const ViewListRoom = () => {
     };
     const fetchMovies = async () => {
         try {
-            const response = await axios.post(`https://cinema.dummywebsite.me/Room/View-List-Rooms`, {
+            const response = await axios.post(`https://cinema.dummywebsite.tech/Room/View-List-Rooms`, {
                 pageSize,
                 currentPage,
                 searchByFields: [
@@ -49,7 +49,7 @@ const ViewListRoom = () => {
     };
 
     const handleDelete = (id) => {
-        axios.delete("https://cinema.dummywebsite.me/room/delete-room/" + id, config)
+        axios.delete("https://cinema.dummywebsite.tech/room/delete-room/" + id, config)
             .then(res => {
                 if (res.status === 200) {
                     window.location.reload()

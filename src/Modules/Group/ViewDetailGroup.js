@@ -16,7 +16,7 @@ const ViewDetailGroup = () => {
     const navigate = useNavigate();
     const fetchMovies = async () => {
         try {
-            const response = await axios.get(`https://cinema.dummywebsite.me/Group/View-Group/${id}`);
+            const response = await axios.get(`https://cinema.dummywebsite.tech/Group/View-Group/${id}`);
             setMovies(response.data);
             setUpdatedName(response.data.data?.title || '');
             setUpdatedType(response.data.data?.type || '');
@@ -29,7 +29,7 @@ const ViewDetailGroup = () => {
     const handleUpdate = async () => {
         try {
             // Make an API call to update the Group name
-            await axios.put(`https://cinema.dummywebsite.me/Group/Update-Group`, {
+            await axios.put(`https://cinema.dummywebsite.tech/Group/Update-Group`, {
                 title: updatedName,
                 id: id,
                 index: updatedIndex,

@@ -53,7 +53,7 @@ const ViewDetailRoomSeat = () => {
 
     useEffect(() => {
         // Fetch list of tickets
-        axios.post(`https://cinema.dummywebsite.me/Ticket/View-List-Tickets`, {
+        axios.post(`https://cinema.dummywebsite.tech/Ticket/View-List-Tickets`, {
             pageSize: 100,
             currentPage: 1,
         })
@@ -63,7 +63,7 @@ const ViewDetailRoomSeat = () => {
     }, []);
 
     useEffect(() => {
-        axios.get(`https://cinema.dummywebsite.me/RoomSeat/View-RoomSeat-By-Room/${id}`)
+        axios.get(`https://cinema.dummywebsite.tech/RoomSeat/View-RoomSeat-By-Room/${id}`)
             .then((res) => {
                 const listSeat = res.data?.data;
                 listSeat.sort((a, b) => {

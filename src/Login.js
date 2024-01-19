@@ -10,7 +10,7 @@ const Login = () => {
     const [isLoggedIn, setLoggedIn] = React.useState(authService.isAuthenticated());
 
     const handleLogin = async () => {
-        const response = await axios.post('https://cinema.dummywebsite.me/Account/Sign-In', { phoneNumber, password });
+        const response = await axios.post('https://cinema.dummywebsite.tech/Account/Sign-In', { phoneNumber, password });
         if (response.data.success) {
             localStorage.setItem('token', response.data.data.accessToken);
             window.location.reload()

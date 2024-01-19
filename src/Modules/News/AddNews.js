@@ -17,7 +17,7 @@ const AddNews = () => {
             formData.append('image', filmImage);
 
             // Make an API call to update the film using FormData
-            await axios.put(`https://cinema.dummywebsite.me/News/Create-News`, formData, {
+            await axios.put(`https://cinema.dummywebsite.tech/News/Create-News`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': 'Bearer ' + localStorage.getItem('token'),
@@ -88,7 +88,7 @@ const AddNews = () => {
                     {filmImage && (
                         <div className="fv-row mb-8">
                             <img
-                                src={`https://cinema.dummywebsite.me/resources/${filmImage}`}
+                                src={`https://cinema.dummywebsite.tech/resources/${filmImage}`}
                                 alt="Film Image"
                                 className="img-fluid"
                                 style={{ maxWidth: '100%', maxHeight: '200px' }}

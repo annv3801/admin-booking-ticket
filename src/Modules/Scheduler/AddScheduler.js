@@ -25,7 +25,7 @@ const AddScheduler = () => {
             // Make an API call to update the category name
             await axios
                 .post(
-                    'https://cinema.dummywebsite.me/scheduler/Create-scheduler',
+                    'https://cinema.dummywebsite.tech/scheduler/Create-scheduler',
                     {
                         theaterId: updatedTheater,
                         roomId: updatedRoom,
@@ -45,7 +45,7 @@ const AddScheduler = () => {
 
     const fetchGroups = async () => {
         try {
-            const response = await axios.post('https://cinema.dummywebsite.me/theater/View-List-Theaters', {}, config);
+            const response = await axios.post('https://cinema.dummywebsite.tech/theater/View-List-Theaters', {}, config);
             // Assuming the API response contains an array of categories
             const theaters = response?.data?.data?.data;
             setTheaterOptions(theaters);
@@ -61,7 +61,7 @@ const AddScheduler = () => {
 
     const fetchFilms = async () => {
         try {
-            const response = await axios.post('https://cinema.dummywebsite.me/film/View-List-films', {}, config);
+            const response = await axios.post('https://cinema.dummywebsite.tech/film/View-List-films', {}, config);
             // Assuming the API response contains an array of categories
             const film = response?.data?.data?.data;
             setFilmOptions(film);
@@ -77,7 +77,7 @@ const AddScheduler = () => {
 
     const fetchRooms = async () => {
         try {
-            const response = await axios.post('https://cinema.dummywebsite.me/room/View-List-rooms', {}, config);
+            const response = await axios.post('https://cinema.dummywebsite.tech/room/View-List-rooms', {}, config);
             // Assuming the API response contains an array of categories
             const room = response?.data?.data?.data;
             setRoomOptions(room);

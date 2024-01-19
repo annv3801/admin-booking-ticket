@@ -16,7 +16,7 @@ const AddGroup = () => {
     const handleCreate = async () => {
         try {
             // Make an API call to update the Group name
-            await axios.post(`https://cinema.dummywebsite.me/Group/Create-Group`, {
+            await axios.post(`https://cinema.dummywebsite.tech/Group/Create-Group`, {
                 type: updatedType,
                 index: updatedIndex,
                 title: updatedName

@@ -35,7 +35,7 @@ const AddSeat = () => {
                 };
                 await axios
                     .post(
-                        'https://cinema.dummywebsite.me/RoomSeat/Create-RoomSeat',
+                        'https://cinema.dummywebsite.tech/RoomSeat/Create-RoomSeat',
                         data,
                         config
                     )
@@ -50,7 +50,7 @@ const AddSeat = () => {
 
     const fetchGroups = async () => {
         try {
-            const response = await axios.post('https://cinema.dummywebsite.me/room/View-List-rooms', {}, config);
+            const response = await axios.post('https://cinema.dummywebsite.tech/room/View-List-rooms', {}, config);
             // Assuming the API response contains an array of categories
             const theaters = response?.data?.data?.data;
             setTheaterOptions(theaters);

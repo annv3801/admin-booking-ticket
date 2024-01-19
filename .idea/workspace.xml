@@ -6,8 +6,41 @@
   <component name="ChangeListManager">
     <list default="true" id="07aa6dac-3524-4242-8ce5-81a6867e752c" name="Changes" comment="wip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Booking/ViewListBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Booking/ViewListBooking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Category/AddCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Category/AddCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Category/ViewDetailCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Category/ViewDetailCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Category/ViewListCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Category/ViewListCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Film/AddFilm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Film/AddFilm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Film/ViewDetailFilm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Film/ViewDetailFilm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Film/ViewListFilm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Film/ViewListFilm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Group/AddGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Group/AddGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Group/ViewDetailGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Group/ViewDetailGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Group/ViewListGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Group/ViewListGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/News/AddNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/News/AddNews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/News/ViewDetailNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/News/ViewDetailNews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/News/ViewListNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/News/ViewListNews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Room/AddRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Room/AddRoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Room/ViewDetailRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Room/ViewDetailRoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Room/ViewListRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Room/ViewListRoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/RoomSeat/AddRoomSeat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/RoomSeat/AddRoomSeat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/RoomSeat/ViewDetailRoomSeat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/RoomSeat/ViewDetailRoomSeat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/RoomSeat/ViewListRoomSeat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/RoomSeat/ViewListRoomSeat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Scheduler/AddScheduler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Scheduler/AddScheduler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Scheduler/ViewDetailScheduler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Scheduler/ViewDetailScheduler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Scheduler/ViewListScheduler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Scheduler/ViewListScheduler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Seat/AddSeat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Seat/AddSeat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Seat/ViewDetailSeat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Seat/ViewDetailSeat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Seat/ViewDetailSeatAdded.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Seat/ViewDetailSeatAdded.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Seat/ViewListSeat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Seat/ViewListSeat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Theater/AddTheater.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Theater/AddTheater.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Theater/ViewDetailTheater.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Theater/ViewDetailTheater.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Theater/ViewListTheater.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Theater/ViewListTheater.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Ticket/AddTicket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Ticket/AddTicket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Ticket/ViewDetailTicket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Ticket/ViewDetailTicket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Ticket/ViewListTicket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Ticket/ViewListTicket.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,12 +50,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "annv3801"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;annv3801&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -42,25 +75,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Learn/admin-booking-ticket/src/Modules",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "npm.npm start.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "ts.external.directory.path": "C:\\Users\\Admin\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Learn/admin-booking-ticket/src/Modules&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.npm start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Admin\\AppData\\Local\\Programs\\WebStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Learn\admin-booking-ticket\src\Modules" />
@@ -113,7 +146,9 @@
       <workItem from="1704902584340" duration="81000" />
       <workItem from="1704976366956" duration="2506000" />
       <workItem from="1705631911542" duration="908000" />
-      <workItem from="1705634993337" duration="20506000" />
+      <workItem from="1705634993337" duration="20573000" />
+      <workItem from="1705667316672" duration="578000" />
+      <workItem from="1705672903278" duration="4083000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <option name="closed" value="true" />
@@ -155,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705661866363</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="wip">
+      <option name="closed" value="true" />
+      <created>1705664424145</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705664424145</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

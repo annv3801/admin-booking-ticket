@@ -30,7 +30,7 @@ const ViewDetailNews = () => {
 
     const fetchMovies = async () => {
         try {
-            const response = await axios.get(`https://cinema.dummywebsite.me/News/View-News/${id}`);
+            const response = await axios.get(`https://cinema.dummywebsite.tech/News/View-News/${id}`);
             setMovies(response.data);
 
             const selectedCategories = response.data.data?.categoryIds || [];
@@ -54,7 +54,7 @@ const ViewDetailNews = () => {
             formData.append('image', filmImage);
 
             // Make an API call to update the film using FormData
-            await axios.put(`https://cinema.dummywebsite.me/News/Update-News`, formData, {
+            await axios.put(`https://cinema.dummywebsite.tech/News/Update-News`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': 'Bearer ' + localStorage.getItem('token'),
@@ -140,7 +140,7 @@ const ViewDetailNews = () => {
                     {filmImage && (
                         <div className="fv-row mb-8">
                             <img
-                                src={`https://cinema.dummywebsite.me/resources/${filmImage}`}
+                                src={`https://cinema.dummywebsite.tech/resources/${filmImage}`}
                                 alt="Film Image"
                                 className="img-fluid"
                                 style={{ maxWidth: '100%', maxHeight: '200px' }}

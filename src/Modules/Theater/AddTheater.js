@@ -18,7 +18,7 @@ const AddTheater = () => {
     const handleCreate = async () => {
         try {
             // Make an API call to update the category name
-            await axios.post(`https://cinema.dummywebsite.me/Theater/Create-Theater`, {
+            await axios.post(`https://cinema.dummywebsite.tech/Theater/Create-Theater`, {
                 name: updatedName,
                 totalRating: 0,
                 location: updatedLocation,

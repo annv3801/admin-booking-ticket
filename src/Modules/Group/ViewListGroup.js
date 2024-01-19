@@ -16,7 +16,7 @@ const ViewListGroup = () => {
     };
     const fetchMovies = async () => {
         try {
-            const response = await axios.post(`https://cinema.dummywebsite.me/Group/View-List-Groups-Not-Have-Type`, {
+            const response = await axios.post(`https://cinema.dummywebsite.tech/Group/View-List-Groups-Not-Have-Type`, {
                 pageSize,
                 currentPage,
                 searchByFields: [
@@ -43,7 +43,7 @@ const ViewListGroup = () => {
     };
 
     const handleDelete = (id) => {
-        axios.delete("https://cinema.dummywebsite.me/Group/delete-Group/" + id, config)
+        axios.delete("https://cinema.dummywebsite.tech/Group/delete-Group/" + id, config)
             .then(res => {
                 if (res.status === 200) {
                     window.location.reload()

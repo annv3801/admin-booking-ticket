@@ -19,7 +19,7 @@ const ViewDetailTheater = () => {
     const navigate = useNavigate();
     const fetchMovies = async () => {
         try {
-            const response = await axios.get(`https://cinema.dummywebsite.me/theater/View-theater/${id}`);
+            const response = await axios.get(`https://cinema.dummywebsite.tech/theater/View-theater/${id}`);
             setMovies(response.data);
             setUpdatedName(response.data?.data?.name || '');
             setUpdatedTotalRating(response.data?.data?.totalRating || 0);
@@ -35,7 +35,7 @@ const ViewDetailTheater = () => {
     const handleUpdate = async () => {
         try {
             // Make an API call to update the category name
-            await axios.put(`https://cinema.dummywebsite.me/theater/Update-Theater`, {
+            await axios.put(`https://cinema.dummywebsite.tech/theater/Update-Theater`, {
                 id: id,
                 name: updatedName,
                 totalRating: updatedTotalRating,

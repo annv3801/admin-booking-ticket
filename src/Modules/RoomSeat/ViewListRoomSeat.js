@@ -36,7 +36,7 @@ const ViewListRoomSeat = () => {
 
     useEffect(() => {
         axios
-            .get(`https://cinema.dummywebsite.me/RoomSeat/View-RoomSeat-By-Room/${id}`)
+            .get(`https://cinema.dummywebsite.tech/RoomSeat/View-RoomSeat-By-Room/${id}`)
             .then((res) => {
                 const listSeat = res.data?.data;
                 // Sort seats by name

@@ -50,7 +50,7 @@ const AddFilm = () => {
             formData.append('image', filmImage);
 
             // Make an API call to update the film using FormData
-            await axios.put(`https://cinema.dummywebsite.me/Film/Create-Film`, formData, {
+            await axios.post(`https://cinema.dummywebsite.tech/Film/Create-Film`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': 'Bearer ' + localStorage.getItem('token'),
@@ -67,7 +67,7 @@ const AddFilm = () => {
 
     const fetchCategories = async () => {
         try {
-            const response = await axios.post('https://cinema.dummywebsite.me/Category/View-List-Categories', {}, config);
+            const response = await axios.post('https://cinema.dummywebsite.tech/Category/View-List-Categories', {}, config);
             // Assuming the API response contains an array of categories
             setCategoryOptions(response?.data?.data?.data);
         } catch (error) {
@@ -77,7 +77,7 @@ const AddFilm = () => {
 
     const fetchGroups = async () => {
         try {
-            const response = await axios.post('https://cinema.dummywebsite.me/Group/View-List-Groups-Not-Have-Type', {}, config);
+            const response = await axios.post('https://cinema.dummywebsite.tech/Group/View-List-Groups-Not-Have-Type', {}, config);
             // Assuming the API response contains an array of categories
             setGroupOptions(response?.data?.data?.data);
         } catch (error) {
@@ -156,7 +156,7 @@ const AddFilm = () => {
                     {filmImage && (
                         <div className="fv-row mb-8">
                             <img
-                                src={`https://cinema.dummywebsite.me/resources/${filmImage}`}
+                                src={`https://cinema.dummywebsite.tech/resources/${filmImage}`}
                                 alt="Film Image"
                                 className="img-fluid"
                                 style={{ maxWidth: '100%', maxHeight: '200px' }}

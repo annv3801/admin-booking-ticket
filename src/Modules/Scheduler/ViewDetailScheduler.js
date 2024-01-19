@@ -16,7 +16,7 @@ const ViewDetailScheduler = () => {
     const navigate = useNavigate();
     const fetchMovies = async () => {
         try {
-            const response = await axios.get(`https://cinema.dummywebsite.me/room/View-Room/${id}`);
+            const response = await axios.get(`https://cinema.dummywebsite.tech/room/View-Room/${id}`);
             setMovies(response.data);
             setUpdatedName(response.data.data?.name || '');
             setUpdatedTheater(response.data.data?.theaterId || '');
@@ -30,7 +30,7 @@ const ViewDetailScheduler = () => {
             // Make an API call to update the category name
             await axios
                 .put(
-                    'https://cinema.dummywebsite.me/Room/Update-Room',
+                    'https://cinema.dummywebsite.tech/Room/Update-Room',
                     {
                         id: id,
                         name: updatedName,
@@ -53,7 +53,7 @@ const ViewDetailScheduler = () => {
 
     const fetchGroups = async () => {
         try {
-            const response = await axios.post('https://cinema.dummywebsite.me/theater/View-List-Theaters', {}, config);
+            const response = await axios.post('https://cinema.dummywebsite.tech/theater/View-List-Theaters', {}, config);
             const theaters = response?.data?.data?.data;
             setTheaterOptions(theaters);
 

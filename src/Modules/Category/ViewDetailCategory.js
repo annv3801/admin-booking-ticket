@@ -14,7 +14,7 @@ const ViewDetailCategory = () => {
     const navigate = useNavigate();
     const fetchMovies = async () => {
         try {
-            const response = await axios.get(`https://cinema.dummywebsite.me/Category/View-Category/${id}`);
+            const response = await axios.get(`https://cinema.dummywebsite.tech/Category/View-Category/${id}`);
             setMovies(response.data);
             setUpdatedName(response.data.data?.name || '');
         } catch (error) {
@@ -25,7 +25,7 @@ const ViewDetailCategory = () => {
     const handleUpdate = async () => {
         try {
             // Make an API call to update the category name
-            await axios.put(`https://cinema.dummywebsite.me/Category/Update-Category`, {
+            await axios.put(`https://cinema.dummywebsite.tech/Category/Update-Category`, {
                 name: updatedName,
                 id: id
             }, config);

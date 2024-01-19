@@ -16,7 +16,7 @@ const ViewListCategory = () => {
     };
     const fetchMovies = async () => {
         try {
-            const response = await axios.post(`https://cinema.dummywebsite.me/Category/View-List-Categories`, {
+            const response = await axios.post(`https://cinema.dummywebsite.tech/Category/View-List-Categories`, {
                 pageSize,
                 currentPage,
                 searchByFields: [
@@ -49,7 +49,7 @@ const ViewListCategory = () => {
     };
 
     const handleDelete = (id) => {
-        axios.delete("https://cinema.dummywebsite.me/category/delete-category/" + id, config)
+        axios.delete("https://cinema.dummywebsite.tech/category/delete-category/" + id, config)
             .then(res => {
                 if (res.status === 200) {
                     window.location.reload()

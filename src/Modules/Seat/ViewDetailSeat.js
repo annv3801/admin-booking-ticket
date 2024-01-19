@@ -67,7 +67,7 @@ const ViewDetailSeat = () => {
 
     const createSeat = async (seatData) => {
         try {
-            const response = await axios.post('https://cinema.dummywebsite.me/Seat/Create-Seat', seatData, config).then(() => {
+            const response = await axios.post('https://cinema.dummywebsite.tech/Seat/Create-Seat', seatData, config).then(() => {
                 navigate('/scheduler');
             });;
             console.log(response.data); // Handle the response as needed
@@ -78,7 +78,7 @@ const ViewDetailSeat = () => {
 
     useEffect(() => {
         // Fetch list of schedulers
-        axios.get(`https://cinema.dummywebsite.me/Scheduler/View-Scheduler/${id}`, {
+        axios.get(`https://cinema.dummywebsite.tech/Scheduler/View-Scheduler/${id}`, {
             pageSize: 100,
             currentPage: 1,
         })
@@ -87,7 +87,7 @@ const ViewDetailSeat = () => {
             });
 
         // Fetch list of tickets
-        axios.post(`https://cinema.dummywebsite.me/Ticket/View-List-Tickets`, {
+        axios.post(`https://cinema.dummywebsite.tech/Ticket/View-List-Tickets`, {
             pageSize: 100,
             currentPage: 1,
         })
@@ -100,7 +100,7 @@ const ViewDetailSeat = () => {
         console.log("countSeat", countSeat)
         if (countSeat == 0 && schedulers && schedulers.roomId) {
             console.log("go here ")
-            axios.get(`https://cinema.dummywebsite.me/RoomSeat/View-RoomSeat-By-Room/${schedulers.roomId}`)
+            axios.get(`https://cinema.dummywebsite.tech/RoomSeat/View-RoomSeat-By-Room/${schedulers.roomId}`)
                 .then((res) => {
                     const listSeat = res.data?.data;
                     listSeat.sort((a, b) => {

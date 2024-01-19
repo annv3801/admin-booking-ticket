@@ -19,7 +19,7 @@ const AddRoomSeat = () => {
 
     const fetchRoom = async () => {
         try {
-            const response = await axios.get(`https://cinema.dummywebsite.me/Room/View-Room/${roomseatId}`);
+            const response = await axios.get(`https://cinema.dummywebsite.tech/Room/View-Room/${roomseatId}`);
             setRoom(response.data.data);
         } catch (error) {
             console.error('Error fetching movies:', error);
@@ -50,7 +50,7 @@ const AddRoomSeat = () => {
             };
             console.log(requestData)
             await axios.post(
-                'https://cinema.dummywebsite.me/RoomSeat/Create-RoomSeat',
+                'https://cinema.dummywebsite.tech/RoomSeat/Create-RoomSeat',
                 requestData,
                 config
             );

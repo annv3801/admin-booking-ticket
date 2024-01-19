@@ -14,7 +14,7 @@ const AddCategory = () => {
     const handleCreate = async () => {
         try {
             // Make an API call to update the category name
-            await axios.post(`https://cinema.dummywebsite.me/Category/Create-Category`, {
+            await axios.post(`https://cinema.dummywebsite.tech/Category/Create-Category`, {
                 name: updatedName
             }, config).then(() => {
             });

@@ -17,7 +17,7 @@ const AddTicket = () => {
     const handleCreate = async () => {
         try {
             // Make an API call to update the category name
-            await axios.post(`https://cinema.dummywebsite.me/ticket/Create-ticket`, {
+            await axios.post(`https://cinema.dummywebsite.tech/ticket/Create-ticket`, {
                 title: updatedName,
                 type: parseInt(updatedType),
                 price: parseFloat(updatedPrice),

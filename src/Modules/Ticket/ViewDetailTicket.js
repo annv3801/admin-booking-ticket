@@ -17,7 +17,7 @@ const ViewDetailTicket = () => {
     const navigate = useNavigate();
     const fetchMovies = async () => {
         try {
-            const response = await axios.get(`https://cinema.dummywebsite.me/ticket/View-ticket/${id}`);
+            const response = await axios.get(`https://cinema.dummywebsite.tech/ticket/View-ticket/${id}`);
             setMovies(response.data);
             setUpdatedName(response.data?.data?.title || '');
             setUpdatedType(response.data?.data?.type || 0);
@@ -31,7 +31,7 @@ const ViewDetailTicket = () => {
     const handleUpdate = async () => {
         try {
             // Make an API call to update the category name
-            await axios.put(`https://cinema.dummywebsite.me/ticket/Update-ticket`, {
+            await axios.put(`https://cinema.dummywebsite.tech/ticket/Update-ticket`, {
                 id: id,
                 title: updatedName,
                 type: parseInt(updatedType),

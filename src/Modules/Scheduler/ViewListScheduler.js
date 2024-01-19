@@ -15,7 +15,7 @@ const ViewListScheduler = () => {
     };
     const fetchMovies = async () => {
         try {
-            const response = await axios.post(`https://cinema.dummywebsite.me/scheduler/View-List-Schedulers`, {
+            const response = await axios.post(`https://cinema.dummywebsite.tech/scheduler/View-List-Schedulers`, {
                 pageSize,
                 currentPage,
                 sortByFields: [
@@ -42,7 +42,7 @@ const ViewListScheduler = () => {
     };
 
     const handleDelete = (id) => {
-        axios.delete("https://cinema.dummywebsite.me/scheduler/delete-scheduler/" + id, config)
+        axios.delete("https://cinema.dummywebsite.tech/scheduler/delete-scheduler/" + id, config)
             .then(res => {
                 if (res.status === 200) {
                     window.location.reload()
@@ -129,8 +129,8 @@ const ViewListScheduler = () => {
                                                      className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View
                                                 List Seat</NavLink>
                                         )}
-                                        <NavLink to={`/scheduler/${movie.id}`}
-                                                 className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View</NavLink>
+                                        {/*<NavLink to={`/scheduler/${movie.id}`}*/}
+                                        {/*         className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View</NavLink>*/}
                                         <a onClick={() => handleDelete(movie.id)}
                                            className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4">Delete</a>
                                     </td>
