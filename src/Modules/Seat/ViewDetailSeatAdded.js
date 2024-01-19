@@ -37,7 +37,7 @@ const Ticket = ({ ticket, onTicketClick }) => {
                 margin: '5px',
                 display: 'inline-block',
                 cursor: 'pointer',
-                color: 'white',
+                color:'white',
                 borderRadius: '4px'
             }}
         >
@@ -65,17 +65,6 @@ const ViewDetailSeat = () => {
         }
     };
 
-    const createSeat = async (seatData) => {
-        try {
-            const response = await axios.post('https://cinema.dummywebsite.me/Seat/Create-Seat', seatData, config).then(() => {
-                navigate('/scheduler');
-            });;
-            console.log(response.data); // Handle the response as needed
-        } catch (error) {
-            console.error('Error creating seat:', error);
-        }
-    };
-
     useEffect(() => {
         // Fetch list of schedulers
         axios.get(`https://cinema.dummywebsite.me/Scheduler/View-Scheduler/${id}`, {
@@ -96,38 +85,27 @@ const ViewDetailSeat = () => {
             });
     }, []);
 
-    useEffect(() => {
-        console.log("countSeat", countSeat)
-        if (countSeat == 0 && schedulers && schedulers.roomId) {
-            console.log("go here ")
-            axios.get(`https://cinema.dummywebsite.me/RoomSeat/View-RoomSeat-By-Room/${schedulers.roomId}`)
-                .then((res) => {
-                    const listSeat = res.data?.data;
-                    listSeat.sort((a, b) => {
-                        const aNameParts = a.name.split('');
-                        const bNameParts = b.name.split('');
-                        if (aNameParts[0] !== bNameParts[0]) {
-                            return aNameParts[0].localeCompare(bNameParts[0]);
-                        }
-                        return parseInt(aNameParts.slice(1).join('')) - parseInt(bNameParts.slice(1).join(''));
-                    });
-
-                    const updatedSeats = listSeat.map((seat) => {
-                        if (seat.ticket) {
-                            const ticket = tickets.find((t) => t.id === seat.ticket.id);
-                            return {
-                                ...seat,
-                                color: ticket ? ticket.color : 'green',
-                            };
-                        }
-                        return seat;
-                    });
-
-                    setSeats(updatedSeats);
-                });
+    const fetchSeats = async () => {
+        try {
+            const response = await axios.get(`https://cinema.dummywebsite.me/Seat/View-List-Seats-By-Scheduler/${id}`, config);
+            if (response.data?.data?.length > 0) {
+                setCountSeat(response.data?.data?.length);
+                console.log("setCountSeat",response.data?.data?.length)
+                const fetchedSeats = response.data.data.map(seat => ({
+                    ...seat.roomSeat,
+                    color: seat.type === 0 ? 'pink' : (seat.ticket?.color || 'grey'),
+                    active: seat.type === 1
+                }));
+                setSeats(fetchedSeats);
+            }
+        } catch (error) {
+            console.error('Error fetching seats:', error);
         }
-    }, [schedulers, tickets, id]);
+    };
 
+    useEffect(() => {
+        fetchSeats();
+    }, [id]);
 
     const seatGroups = seats.reduce((groups, seat) => {
         const groupName = seat.name.charAt(0);
@@ -179,24 +157,6 @@ const ViewDetailSeat = () => {
         setSelectedTicketColor(ticket.color || null);
     };
 
-    const createSeats = async () => {
-        try {
-            const seatRequests = selectedPairs.map(pair => ({
-                schedulerId: schedulers.id, // Replace with the actual schedulerId
-                roomSeatId: pair.roomSeatId,
-                ticketId: pair.ticketId,
-                type: pair.type,
-            }));
-
-            const requestData = {
-                createSeatRequests: seatRequests
-            };
-
-            await createSeat(requestData);
-        } catch (error) {
-            console.error('Error creating seats:', error);
-        }
-    };
 
     return (
         <div id="kt_app_content_container" className="app-container container-fluid">
@@ -240,7 +200,6 @@ const ViewDetailSeat = () => {
                         </div>
                     ))}
                 </div>
-                <button onClick={createSeats}>Create Seats</button>
             </div>
         </div>
     );

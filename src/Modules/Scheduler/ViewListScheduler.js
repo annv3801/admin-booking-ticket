@@ -105,7 +105,11 @@ const ViewListScheduler = () => {
                                         <span className="badge badge-light-success">{movie.status}</span>
                                     </td>
                                     <td className="text-end">
-                                        <NavLink to={`/seat/${movie.id}`} className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View List Seat</NavLink>
+                                        {movie.countSeat == 0 ? (
+                                            <NavLink to={`/seat/${movie.id}`} className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View List Seat</NavLink>
+                                        ) : (
+                                            <NavLink to={`/seat-added/${movie.id}`} className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View List Seat</NavLink>
+                                        )}
                                         <NavLink to={`/scheduler/${movie.id}`} className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View</NavLink>
                                         <a onClick={() => handleDelete(movie.id)} className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4">Delete</a>
                                     </td>
