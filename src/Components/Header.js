@@ -1,12 +1,13 @@
 import React from 'react';
-import {Navigate} from "react-router-dom";
-import authService from "../authService";
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Header = () => {
+    const navigate = useNavigate();
     const handleLogout = () => {
         localStorage.removeItem('token');
-        return <Navigate to="/login" />;
+        navigate("/login");
     };
     return (
         <div id="kt_app_header" className="app-header" data-kt-sticky="true"

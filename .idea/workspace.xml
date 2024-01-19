@@ -6,25 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="07aa6dac-3524-4242-8ce5-81a6867e752c" name="Changes" comment="wip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Booking/ViewListBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Booking/ViewListBooking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Category/AddCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Category/AddCategory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Category/ViewListCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Category/ViewListCategory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Film/AddFilm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Film/AddFilm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Film/ViewDetailFilm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Film/ViewDetailFilm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Film/ViewListFilm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Film/ViewListFilm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Group/ViewListGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Group/ViewListGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Room/AddRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Room/AddRoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Room/ViewDetailRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Room/ViewDetailRoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Room/ViewListRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Room/ViewListRoom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/RoomSeat/AddRoomSeat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/RoomSeat/AddRoomSeat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Scheduler/AddScheduler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Scheduler/AddScheduler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Scheduler/ViewListScheduler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Scheduler/ViewListScheduler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Seat/ViewDetailSeat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Seat/ViewDetailSeat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Seat/ViewDetailSeatAdded.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Theater/ViewListTheater.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Theater/ViewListTheater.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Modules/Ticket/ViewListTicket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Ticket/ViewListTicket.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +113,7 @@
       <workItem from="1704902584340" duration="81000" />
       <workItem from="1704976366956" duration="2506000" />
       <workItem from="1705631911542" duration="908000" />
-      <workItem from="1705634993337" duration="19094000" />
+      <workItem from="1705634993337" duration="20506000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <option name="closed" value="true" />
@@ -164,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705643309718</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="wip">
+      <option name="closed" value="true" />
+      <created>1705661866363</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705661866363</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

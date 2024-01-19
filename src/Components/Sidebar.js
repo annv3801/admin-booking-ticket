@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import authService from "../authService";
-import {Navigate} from "react-router-dom";
-
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
+    const navigate = useNavigate();
     const isLoggedIn = authService.isAuthenticated();
-    if(!isLoggedIn) {<Navigate to="/login" />}
+
+    useEffect(() => {
+        if (!isLoggedIn) {
+            navigate("/login");
+        }
+    }, [isLoggedIn, navigate]);
     return (
         <div id="kt_app_sidebar" className="app-sidebar flex-column" data-kt-drawer="true"
              data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}"
@@ -339,7 +344,7 @@ const Sidebar = () => {
 														<span className="menu-bullet">
 															<span className="bullet bullet-dot"></span>
 														</span>
-                                            <span className="menu-title">View List Slide</span>
+                                            <span className="menu-title">View List News</span>
                                         </a>
                                     </div>
                                     <div className="menu-item">
