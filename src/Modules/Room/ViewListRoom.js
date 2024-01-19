@@ -6,7 +6,8 @@ import Pagination from "../../Pagination";
 const ViewListRoom = () => {
     const [movies, setMovies] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const pageSize = 5;
+    const [searchValue, setSearchValue] = useState('');
+    const pageSize = 10;
     const [total, setTotal] = useState(0);
     const config = {
         headers: {
@@ -18,6 +19,18 @@ const ViewListRoom = () => {
             const response = await axios.post(`https://cinema.dummywebsite.me/Room/View-List-Rooms`, {
                 pageSize,
                 currentPage,
+                searchByFields: [
+                    {
+                        searchFieldName: "name",
+                        searchValue: searchValue // add the search value here
+                    }
+                ],
+                sortByFields: [
+                    {
+                        colName: "createdTime",
+                        sortDirection: "DESC"
+                    }
+                ],
             });
 
             setMovies(response.data);
@@ -29,7 +42,7 @@ const ViewListRoom = () => {
 
     useEffect(() => {
         fetchMovies();
-    }, [currentPage]);
+    }, [currentPage, searchValue]);
 
     const handlePageChange = (newPage) => {
         setCurrentPage(newPage);
@@ -43,14 +56,34 @@ const ViewListRoom = () => {
                 }
             })
     }
+
+    const handleSearch = (e) => {
+        // Update the searchValue state when the input value changes
+        setSearchValue(e.target.value);
+    };
     return (
         <div id="kt_app_content_container" className="app-container container-fluid">
+            <div className="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+                <h1 className="page-heading d-flex text-dark fw-bold flex-column justify-content-center mb-5">View
+                    List Rooms Management</h1>
+            </div>
             <div className="card mb-5 mb-xl-8">
                 {/*begin::Header*/}
                 <div className="card-header border-0 pt-5">
-                    <h3 className="card-title align-items-start flex-column">
-                        <span className="card-label fw-bold fs-3 mb-1">View List Room Management</span>
-                    </h3>
+                    <form className="position-relative" autoComplete="off">
+                        <i className="ki-duotone ki-magnifier fs-3 text-gray-500 position-absolute ms-5 translate-middle-y"
+                           style={{top: '43%'}}><span
+                            className="path1"></span><span className="path2"></span></i>
+
+                        <input
+                            type="text"
+                            className="form-control form-control-solid px-13"
+                            name="search"
+                            value={searchValue} // bind the value to the searchValue state
+                            onChange={handleSearch} // handle input changes
+                            placeholder="Search by name..."
+                        />
+                    </form>
                     <div className="card-toolbar">
                         <a href="/add-room" className="btn btn-sm btn-light btn-active-primary">
                             <i className="ki-duotone ki-plus fs-2"></i>New Room</a>
@@ -78,18 +111,25 @@ const ViewListRoom = () => {
                             {movies?.data?.data.map((movie) => (
                                 <tr>
                                     <td>
-                                        <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.id}</a>
+                                        <a href="#"
+                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.id}</a>
                                     </td>
                                     <td>
-                                        <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.name}</a>
+                                        <a href="#"
+                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.name}</a>
                                     </td>
                                     <td>
-                                        <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.theater.name}</a>
+                                        <a href="#"
+                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.theater.name}</a>
                                     </td>
                                     <td className="text-end">
-                                        <NavLink to={`/room-seat/${movie.id}`} className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View Room Seat</NavLink>
-                                        <NavLink to={`/room/${movie.id}`} className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View</NavLink>
-                                        <a onClick={() => handleDelete(movie.id)} className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4">Delete</a>
+                                        <NavLink to={`/room-seat/${movie.id}`}
+                                                 className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View
+                                            Room Seat</NavLink>
+                                        <NavLink to={`/room/${movie.id}`}
+                                                 className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View</NavLink>
+                                        <a onClick={() => handleDelete(movie.id)}
+                                           className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4">Delete</a>
                                     </td>
                                 </tr>
                             ))}

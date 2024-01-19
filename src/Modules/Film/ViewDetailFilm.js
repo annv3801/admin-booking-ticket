@@ -87,7 +87,7 @@ const ViewDetailFilm = () => {
 
             // Optionally, you can refetch the data to update the UI with the latest changes
             await fetchMovies().then(() => {
-                navigate('/group');
+                navigate('/film');
             });
         } catch (error) {
             console.error('Error updating film:', error);
@@ -141,7 +141,7 @@ const ViewDetailFilm = () => {
                 {/*begin::Header*/}
                 <div className="card-header border-0 pt-5">
                     <h3 className="card-title align-items-start flex-column">
-                        <span className="card-label fw-bold fs-3 mb-1">View Detail Group</span>
+                        <span className="card-label fw-bold fs-3 mb-1">View Detail Film</span>
                     </h3>
                 </div>
                 {/*end::Header*/}

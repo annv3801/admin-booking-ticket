@@ -329,13 +329,13 @@ const Sidebar = () => {
                                             <span className="path3"></span>
                                         </i>
                                     </span>
-                                    <span className="menu-title">Slide Management</span>
+                                    <span className="menu-title">News Management</span>
                                     <span className="menu-arrow"></span>
                                 </span>
                                 <div className="menu-sub menu-sub-accordion">
                                     <div className="menu-item">
                                         <a className="menu-link"
-                                           href="/scheduler">
+                                           href="/news">
 														<span className="menu-bullet">
 															<span className="bullet bullet-dot"></span>
 														</span>
@@ -344,11 +344,11 @@ const Sidebar = () => {
                                     </div>
                                     <div className="menu-item">
                                         <a className="menu-link"
-                                           href="/add-scheduler">
+                                           href="/add-news">
 														<span className="menu-bullet">
 															<span className="bullet bullet-dot"></span>
 														</span>
-                                            <span className="menu-title">Add Slide</span>
+                                            <span className="menu-title">Add News</span>
                                         </a>
                                     </div>
                                 </div>

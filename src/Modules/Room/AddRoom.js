@@ -73,7 +73,7 @@ const AddRoom = () => {
                             type="text"
                             className="form-control form-control-lg form-control-solid"
                             name="name"
-                            placeholder="Input category name"
+                            placeholder="Input room name"
                             value={updatedName}
                             onChange={(e) => setUpdatedName(e.target.value)}
                         />

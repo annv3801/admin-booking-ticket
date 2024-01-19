@@ -1,12 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-import {NavLink} from "react-router-dom";
 import Pagination from "../../Pagination";
 
 const ViewListBooking = () => {
     const [movies, setMovies] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const pageSize = 5;
+    const pageSize = 10;
     const [total, setTotal] = useState(0);
     const [searchValue, setSearchValue] = useState('');
     const config = {
@@ -75,12 +74,13 @@ const ViewListBooking = () => {
 
     return (
         <div id="kt_app_content_container" className="app-container container-fluid">
+            <div className="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+                <h1 className="page-heading d-flex text-dark fw-bold flex-column justify-content-center mb-5">View
+                    List Bookings Management</h1>
+            </div>
             <div className="card mb-5 mb-xl-8">
                 {/*begin::Header*/}
                 <div className="card-header border-0 pt-5 d-flex justify-content-between">
-                    <h3 className="card-title align-items-start flex-column">
-                        <span className="card-label fw-bold fs-3 mb-1">View List Booking Management</span>
-                    </h3>
                     <form className="position-relative" autoComplete="off">
                         <i className="ki-duotone ki-magnifier fs-3 text-gray-500 position-absolute ms-5 translate-middle-y"
                            style={{top: '43%'}}><span
@@ -106,7 +106,7 @@ const ViewListBooking = () => {
                             {/*begin::Table head*/}
                             <thead>
                             <tr className="fw-bold text-muted bg-light">
-                            <th className="min-w-200px">Name</th>
+                                <th className="min-w-200px">Name</th>
                                 <th className="min-w-200px">Film</th>
                                 <th className="min-w-200px">Scheduler - Room</th>
                                 <th className="min-w-200px">Time</th>
@@ -148,7 +148,7 @@ const ViewListBooking = () => {
                                         <a onClick={() => handleDelete(movie.id)}
                                            className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4">Cancel</a>
                                         <a onClick={() => handleReceived(movie.id)}
-                                           className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4">Received</a>
+                                           className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 mx-2">Received</a>
                                     </td>
                                 </tr>
                             ))}

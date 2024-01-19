@@ -3,13 +3,10 @@ import axios from 'axios';
 import {useNavigate, useParams} from 'react-router-dom';
 
 const Seat = ({ seat, onSeatClick}) => {
-    const handleClick = () => {
-        onSeatClick(seat);
-    };
+
 
     return (
         <button
-            onClick={handleClick}
             style={{
                 width: '40px',
                 height: '40px',
@@ -115,42 +112,6 @@ const ViewDetailSeat = () => {
         groups[groupName].push(seat);
         return groups;
     }, {});
-    const handleSeatClick = (seat) => {
-        if (selectedTicket) {
-            if (firstSeatClick) {
-                // Add all seats to selectedPairs with type 0 and the corresponding ticket ID on the first seat click
-                const seatsToAdd = seats.map((s) => ({
-                    schedulerId: schedulers.id,
-                    ticketId: selectedTicket.id,
-                    roomSeatId: s.id,
-                    type: 0,
-                }));
-
-                setSelectedPairs(seatsToAdd);
-                setFirstSeatClick(false);
-            } else {
-                // Update the selected seat in selectedPairs with type 1 and the corresponding ticket ID
-                setSelectedPairs((prevPairs) => {
-                    const updatedPairs = prevPairs.map((pair) =>
-                        pair.roomSeatId === seat.id ? { ...pair, type: 1, ticketId: selectedTicket.id } : pair
-                    );
-                    return updatedPairs;
-                });
-            }
-
-            const updatedSeats = seats.map((s) => {
-                if (s.id === seat.id) {
-                    return {
-                        ...s,
-                        color: selectedTicketColor || 'pink',
-                    };
-                }
-                return s;
-            });
-
-            setSeats(updatedSeats);
-        }
-    };
 
     const handleTicketClick = (ticket) => {
         setSelectedTicket(ticket);
@@ -193,7 +154,6 @@ const ViewDetailSeat = () => {
                                     <Seat
                                         key={seat.id}
                                         seat={seat}
-                                        onSeatClick={handleSeatClick}
                                     />
                                 )} )}
                             </div>

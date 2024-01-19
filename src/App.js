@@ -32,7 +32,9 @@ import ViewDetailSeat from "./Modules/Seat/ViewDetailSeat";
 import AddSeat from "./Modules/Seat/AddSeat";
 import ViewListBooking from "./Modules/Booking/ViewListBooking";
 import ViewDetailSeatAdded from "./Modules/Seat/ViewDetailSeatAdded";
-
+import ViewListNews from "./Modules/News/ViewListNews";
+import ViewDetailNews from "./Modules/News/ViewDetailNews";
+import AddNews from "./Modules/News/AddNews";
 
 const App = () => {
     return (
@@ -99,6 +101,12 @@ const App = () => {
                 {/* Booking */}
                 <Route path="/booking" element={<Layout><ViewListBooking /></Layout>} />
                 {/* End Booking */}
+
+                {/* room seat */}
+                <Route path="/news" element={<Layout><ViewListNews /></Layout>} />
+                <Route path="/news/:id" element={<Layout><ViewDetailNews /></Layout>} />
+                <Route path="/add-news" element={<Layout><AddNews /></Layout>} />
+                {/*  End room seat  */}
             </Routes>
         </Router>
     );

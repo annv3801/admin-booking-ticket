@@ -7,8 +7,24 @@
     <list default="true" id="07aa6dac-3524-4242-8ce5-81a6867e752c" name="Changes" comment="wip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Booking/ViewListBooking.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Booking/ViewListBooking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Category/AddCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Category/AddCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Category/ViewListCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Category/ViewListCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Film/AddFilm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Film/AddFilm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Film/ViewDetailFilm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Film/ViewDetailFilm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Film/ViewListFilm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Film/ViewListFilm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Group/ViewListGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Group/ViewListGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Room/AddRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Room/AddRoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Room/ViewDetailRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Room/ViewDetailRoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Room/ViewListRoom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Room/ViewListRoom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/RoomSeat/AddRoomSeat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/RoomSeat/AddRoomSeat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Scheduler/AddScheduler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Scheduler/AddScheduler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Scheduler/ViewListScheduler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Scheduler/ViewListScheduler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Modules/Seat/ViewDetailSeat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Seat/ViewDetailSeat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Seat/ViewDetailSeatAdded.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Theater/ViewListTheater.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Theater/ViewListTheater.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Ticket/ViewListTicket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Ticket/ViewListTicket.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +33,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "annv3801"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="35afffde-96d5-41f9-b3f9-8f3a044b63d9" />
+        <option name="url" value="https://github.com/annv3801/admin-booking-ticket.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,7 +65,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Learn/admin-booking-ticket/src/Modules/Seat",
+    "last_opened_file_path": "C:/Learn/admin-booking-ticket/src/Modules",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -50,6 +80,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Learn\admin-booking-ticket\src\Modules" />
       <recent name="C:\Learn\admin-booking-ticket\src\Modules\Seat" />
       <recent name="$PROJECT_DIR$/src/Modules" />
       <recent name="D:\DoAn\admin_booking\src\Modules" />
@@ -99,7 +130,7 @@
       <workItem from="1704902584340" duration="81000" />
       <workItem from="1704976366956" duration="2506000" />
       <workItem from="1705631911542" duration="908000" />
-      <workItem from="1705634993337" duration="6830000" />
+      <workItem from="1705634993337" duration="19094000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <option name="closed" value="true" />
@@ -125,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704902621010</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="wip">
+      <option name="closed" value="true" />
+      <created>1705643309718</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705643309718</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

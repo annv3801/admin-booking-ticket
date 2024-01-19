@@ -103,7 +103,7 @@ const AddScheduler = () => {
                 {/* begin::Header */}
                 <div className="card-header border-0 pt-5">
                     <h3 className="card-title align-items-start flex-column">
-                        <span className="card-label fw-bold fs-3 mb-1">Add Room</span>
+                        <span className="card-label fw-bold fs-3 mb-1">Add Scheduler</span>
                     </h3>
                 </div>
                 {/* end::Header */}
@@ -156,28 +156,12 @@ const AddScheduler = () => {
                     </div>
                     <div className="fv-row mb-8">
                         <div className="mb-2">
-                            <label className="required fs-6 fw-semibold">Select Start Date</label>
+                            <label className="required fs-6 fw-semibold">Start Time</label>
                         </div>
                         <div>
                             <DatePicker
                                 selected={selectedStartDate}
                                 onChange={(date) => setSelectedStartDate(date)}
-                                showTimeSelect
-                                timeFormat="HH:mm"
-                                timeIntervals={15}
-                                dateFormat="yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-                                className="form-control form-select form-select-solid"
-                            />
-                        </div>
-                    </div>
-                    <div className="fv-row mb-8">
-                        <div className="mb-2">
-                            <label className="required fs-6 fw-semibold">Select End Date</label>
-                        </div>
-                        <div>
-                            <DatePicker
-                                selected={selectedEndDate}
-                                onChange={(date) => setSelectedEndDate(date)}
                                 showTimeSelect
                                 timeFormat="HH:mm"
                                 timeIntervals={15}

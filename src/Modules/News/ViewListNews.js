@@ -3,7 +3,7 @@ import axios from "axios";
 import {NavLink} from "react-router-dom";
 import Pagination from "../../Pagination";
 
-const ViewListTheater = () => {
+const ViewListNews = () => {
     const [movies, setMovies] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [searchValue, setSearchValue] = useState('');
@@ -16,19 +16,13 @@ const ViewListTheater = () => {
     };
     const fetchMovies = async () => {
         try {
-            const response = await axios.post(`https://cinema.dummywebsite.me/Theater/View-List-Theaters`, {
+            const response = await axios.post(`https://cinema.dummywebsite.me/News/View-List-News`, {
                 pageSize,
                 currentPage,
                 searchByFields: [
                     {
-                        searchFieldName: "name",
+                        searchFieldName: "title",
                         searchValue: searchValue // add the search value here
-                    }
-                ],
-                sortByFields: [
-                    {
-                        colName: "createdTime",
-                        sortDirection: "DESC"
                     }
                 ],
             });
@@ -49,7 +43,7 @@ const ViewListTheater = () => {
     };
 
     const handleDelete = (id) => {
-        axios.delete("https://cinema.dummywebsite.me/theater/delete-theater/" + id, config)
+        axios.delete("https://cinema.dummywebsite.me/News/Delete-News/" + id, config)
             .then(res => {
                 if (res.status === 200) {
                     window.location.reload()
@@ -65,7 +59,7 @@ const ViewListTheater = () => {
         <div id="kt_app_content_container" className="app-container container-fluid">
             <div className="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                 <h1 className="page-heading d-flex text-dark fw-bold flex-column justify-content-center mb-5">View
-                    List Theaters Management</h1>
+                    List News Management</h1>
             </div>
             <div className="card mb-5 mb-xl-8">
                 {/*begin::Header*/}
@@ -85,8 +79,8 @@ const ViewListTheater = () => {
                         />
                     </form>
                     <div className="card-toolbar">
-                        <a href="/add-theater" className="btn btn-sm btn-light btn-active-primary">
-                            <i className="ki-duotone ki-plus fs-2"></i>New Theater</a>
+                        <a href="/add-news" className="btn btn-sm btn-light btn-active-primary">
+                            <i className="ki-duotone ki-plus fs-2"></i>New News</a>
                     </div>
                 </div>
                 {/*end::Header*/}
@@ -100,9 +94,7 @@ const ViewListTheater = () => {
                             <thead>
                             <tr className="fw-bold text-muted bg-light">
                                 <th className="min-w-125px ps-4 rounded-start">Id</th>
-                                <th className="min-w-500px">Name</th>
-                                <th className="min-w-125px">Location</th>
-                                <th className="min-w-125px">PhoneNumber</th>
+                                <th className="min-w-500px">Title</th>
                                 <th className="min-w-125px">Status</th>
                                 <th className="min-w-200px text-end rounded-end"></th>
                             </tr>
@@ -118,21 +110,13 @@ const ViewListTheater = () => {
                                     </td>
                                     <td>
                                         <a href="#"
-                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.name}</a>
-                                    </td>
-                                    <td>
-                                        <a href="#"
-                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.location}</a>
-                                    </td>
-                                    <td>
-                                        <a href="#"
-                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.phoneNumber}</a>
+                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.title}</a>
                                     </td>
                                     <td>
                                         <span className="badge badge-light-success">{movie.status}</span>
                                     </td>
                                     <td className="text-end">
-                                        <NavLink to={`/theater/${movie.id}`}
+                                        <NavLink to={`/news/${movie.id}`}
                                                  className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View</NavLink>
                                         <a onClick={() => handleDelete(movie.id)}
                                            className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4">Delete</a>
@@ -158,4 +142,4 @@ const ViewListTheater = () => {
     );
 };
 
-export default ViewListTheater;
+export default ViewListNews;

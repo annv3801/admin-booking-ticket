@@ -240,7 +240,7 @@ const ViewDetailSeat = () => {
                         </div>
                     ))}
                 </div>
-                <button onClick={createSeats}>Create Seats</button>
+                <button className="btn btn-lg btn-primary" onClick={createSeats}>Create Seats</button>
             </div>
         </div>
     );

@@ -17,7 +17,6 @@ const AddCategory = () => {
             await axios.post(`https://cinema.dummywebsite.me/Category/Create-Category`, {
                 name: updatedName
             }, config).then(() => {
-                navigate('/category');
             });
         } catch (error) {
             console.error('Error creating category name:', error);

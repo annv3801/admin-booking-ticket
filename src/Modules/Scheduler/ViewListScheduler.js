@@ -6,7 +6,7 @@ import Pagination from "../../Pagination";
 const ViewListScheduler = () => {
     const [movies, setMovies] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const pageSize = 5;
+    const pageSize = 10;
     const [total, setTotal] = useState(0);
     const config = {
         headers: {
@@ -17,7 +17,13 @@ const ViewListScheduler = () => {
         try {
             const response = await axios.post(`https://cinema.dummywebsite.me/scheduler/View-List-Schedulers`, {
                 pageSize,
-                currentPage
+                currentPage,
+                sortByFields: [
+                    {
+                        colName: "createdTime",
+                        sortDirection: "DESC"
+                    }
+                ]
             });
 
             setMovies(response.data);
@@ -47,11 +53,14 @@ const ViewListScheduler = () => {
     console.log(movies)
     return (
         <div id="kt_app_content_container" className="app-container container-fluid">
+            <div className="page-title d-flex flex-column justify-content-center flex-wrap me-3">
+                <h1 className="page-heading d-flex text-dark fw-bold flex-column justify-content-center mb-5">View
+                    List Schedulers Management</h1>
+            </div>
             <div className="card mb-5 mb-xl-8">
                 {/*begin::Header*/}
                 <div className="card-header border-0 pt-5">
                     <h3 className="card-title align-items-start flex-column">
-                        <span className="card-label fw-bold fs-3 mb-1">View List Scheduler Management</span>
                     </h3>
                     <div className="card-toolbar">
                         <a href="/add-scheduler" className="btn btn-sm btn-light btn-active-primary">
@@ -84,34 +93,46 @@ const ViewListScheduler = () => {
                             {movies?.data?.data.map((movie) => (
                                 <tr>
                                     <td>
-                                        <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.id}</a>
+                                        <a href="#"
+                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.id}</a>
                                     </td>
                                     <td>
-                                        <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.room.name}</a>
+                                        <a href="#"
+                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.room.name}</a>
                                     </td>
                                     <td>
-                                        <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.theater.name}</a>
+                                        <a href="#"
+                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.theater.name}</a>
                                     </td>
                                     <td>
-                                        <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.film.name}</a>
+                                        <a href="#"
+                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{movie.film.name}</a>
                                     </td>
                                     <td>
-                                        <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{new Date(new Date(movie.startTime).getTime() - 7 * 60 * 60 * 1000).toLocaleDateString('en-GB')} - {new Date(new Date(movie.startTime).getTime() - 7 * 60 * 60 * 1000).toLocaleTimeString('en-GB', {hour12: false})}</a>
+                                        <a href="#"
+                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{new Date(new Date(movie.startTime).getTime() - 7 * 60 * 60 * 1000).toLocaleDateString('en-GB')} - {new Date(new Date(movie.startTime).getTime() - 7 * 60 * 60 * 1000).toLocaleTimeString('en-GB', {hour12: false})}</a>
                                     </td>
                                     <td>
-                                        <a href="#" className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{new Date(new Date(movie.endTime).getTime() - 7 * 60 * 60 * 1000).toLocaleDateString('en-GB')} - {new Date(new Date(movie.endTime).getTime() - 7 * 60 * 60 * 1000).toLocaleTimeString('en-GB', {hour12: false})}</a>
+                                        <a href="#"
+                                           className="text-dark fw-bold text-hover-primary d-block mb-1 fs-6">{new Date(new Date(movie.endTime).getTime() - 7 * 60 * 60 * 1000).toLocaleDateString('en-GB')} - {new Date(new Date(movie.endTime).getTime() - 7 * 60 * 60 * 1000).toLocaleTimeString('en-GB', {hour12: false})}</a>
                                     </td>
                                     <td>
                                         <span className="badge badge-light-success">{movie.status}</span>
                                     </td>
                                     <td className="text-end">
                                         {movie.countSeat == 0 ? (
-                                            <NavLink to={`/seat/${movie.id}`} className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View List Seat</NavLink>
+                                            <NavLink to={`/seat/${movie.id}`}
+                                                     className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View
+                                                List Seat</NavLink>
                                         ) : (
-                                            <NavLink to={`/seat-added/${movie.id}`} className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View List Seat</NavLink>
+                                            <NavLink to={`/seat-added/${movie.id}`}
+                                                     className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View
+                                                List Seat</NavLink>
                                         )}
-                                        <NavLink to={`/scheduler/${movie.id}`} className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View</NavLink>
-                                        <a onClick={() => handleDelete(movie.id)} className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4">Delete</a>
+                                        <NavLink to={`/scheduler/${movie.id}`}
+                                                 className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4 me-2">View</NavLink>
+                                        <a onClick={() => handleDelete(movie.id)}
+                                           className="btn btn-bg-light btn-color-muted btn-active-color-primary btn-sm px-4">Delete</a>
                                     </td>
                                 </tr>
                             ))}
